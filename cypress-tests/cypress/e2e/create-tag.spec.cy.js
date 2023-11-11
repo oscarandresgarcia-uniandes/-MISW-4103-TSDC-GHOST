@@ -1,7 +1,7 @@
 import LoginPage from './PageObject/LoginPage';
 import TagPage from './PageObject/TagPage';
 
-describe('Gestión de Tags', () => {
+describe('Gestión de Tags - Crear Tag Exitoso', () => {
     const loginPage = new LoginPage();
     const tagPage = new TagPage();
 
