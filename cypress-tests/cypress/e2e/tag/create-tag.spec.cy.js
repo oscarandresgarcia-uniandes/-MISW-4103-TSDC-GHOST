@@ -1,35 +1,49 @@
 import LoginPage from '../page-object/LoginPage';
-import TagPage from '../page-object/TagPage';
+import TagNewPage from '../page-object/TagNewPage';
+import TagListPage from '../page-object/TagListPage';
+import TagEditPage from '../page-object/TagEditPage';
 
 describe('Gestión de Tags - Crear Tag Exitoso', () => {
     const loginPage = new LoginPage();
-    const tagPage = new TagPage();
+    const tagListPage = new TagListPage();
+    const tagNewPage = new TagNewPage();
+    const tagEditPage = new TagEditPage();
 
     beforeEach(() => {
         loginPage.visit();
         loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
     });
 
-    it('Crear Tag Exitoso', () => {
-        tagPage.visit();
-        tagPage.navigateToNewTagPage();
+    it.only('Crear Tag Exitoso', () => {
+        tagNewPage.visit();
+        tagListPage.navigateToNewTagPage();
 
         const tagData = {
             name: 'Nuevo Tag',
-            color: '#e3f218',
+            color: 'e3f218',
             slug: 'nuevo-slug',
-            descripcion: 'Nuevo tag de prueba',
-            imagen: '../fixures/images/tigre-test.jpg'
+            description: 'Nuevo tag de prueba 1',
+            image: {name: 'tigre-test.jpg', type: 'image/jpeg'}
         };
 
         // Crear un nuevo tag
-        tagPage.createTag(tagData.tagName);
+        tagNewPage.createTag(tagData);
+        cy.wait(1000); //Mienrtas la imagen es subida
 
-        // Listar Tags
-        // Verificar el nuevo tag en la lista
+        //Guardar datos del nuevo tag
+        tagNewPage.saveCreateTag();
 
-        // Borrar Tag
-        tagPage.deleteTag(tagData.tagName);
-        // Verificar que el usuario se haya eliminado de la lista
+        //Una vez el tag creado, debe existir la opción para borrarlo
+        tagNewPage.newTagCanBeDeleted();
+
+        // Ir a lista de tags
+        tagListPage.visit();
+
+        //El tag existe en la lista de tags
+        tagListPage.tagExists(tagData);
+
+        //Ir al modo edición y verificar que la imagen subida es correcta
+        tagListPage.navigateToEditTag(tagData);
+        tagEditPage.imageExists(tagData);
     });
 });
