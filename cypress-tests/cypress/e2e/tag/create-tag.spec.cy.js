@@ -1,5 +1,5 @@
-import LoginPage from './PageObject/LoginPage';
-import TagPage from './PageObject/TagPage';
+import LoginPage from '../page-object/LoginPage';
+import TagPage from '../page-object/TagPage';
 
 describe('Gestión de Tags - Crear Tag Exitoso', () => {
     const loginPage = new LoginPage();
@@ -15,8 +15,11 @@ describe('Gestión de Tags - Crear Tag Exitoso', () => {
         tagPage.navigateToNewTagPage();
 
         const tagData = {
-            tagName: 'Nuevo Tag',
-            // Otros datos del tag
+            name: 'Nuevo Tag',
+            color: '#e3f218',
+            slug: 'nuevo-slug',
+            descripcion: 'Nuevo tag de prueba',
+            imagen: '../fixures/images/tigre-test.jpg'
         };
 
         // Crear un nuevo tag
