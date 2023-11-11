@@ -1,0 +1,28 @@
+{
+  "name": "ghost-cypress",
+  "version": "1.0.0",
+  "description": "Pruebas E2E con Cypress para el CMS Ghost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST.git"
+  },
+  "keywords": [
+    "test",
+    "cypress",
+    "ghost",
+    "MISO"
+  ],
+  "author": "MISO - Pruebas automatizadas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues"
+  },
+  "homepage": "https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST#readme",
+  "devDependencies": {
+    "cypress": "^13.5.0"
+  }
+}
