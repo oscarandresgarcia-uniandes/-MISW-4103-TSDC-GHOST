@@ -3,7 +3,7 @@ import PageContentPage from '../page-object/PageContentPage';
 import PageListPage from '../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Páginas - Crear Página exitosa y publicar', () => {
+describe('Gestión de Páginas - Crear Página exitosa (Scheduled)', () => {
     const loginPage = new LoginPage();
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
@@ -13,7 +13,7 @@ describe('Gestión de Páginas - Crear Página exitosa y publicar', () => {
         loginPage.login();
     });
 
-    it.only('Crear Página exitosa y publicar', () => {
+    it.only('Crear Página exitosa (Scheduled)', () => {
         pageContentPage.visit();
         
         const pageData = {
@@ -25,12 +25,12 @@ describe('Gestión de Páginas - Crear Página exitosa y publicar', () => {
         pageContentPage.contentPage(pageData);
 
         // publicar la página
-        pageContentPage.publishPage();
+        pageContentPage.schedulePage();
 
         // navegar al listado de páginas
         pageListPage.visit();
 
         //La pagina está creada comom published
-        pageContentPage.pageExists(pageData, 'Published');
+        pageContentPage.pageExists(pageData, 'Scheduled');
     });
 });
