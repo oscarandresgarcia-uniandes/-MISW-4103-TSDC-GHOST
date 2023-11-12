@@ -5,7 +5,7 @@ import PageContentPage from '../page-object/PageContentPage';
 import PageListPage from '../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Tags - Asociar tag a post', () => {
+describe('Gestión de Tags - Asociar tag a page', () => {
     const loginPage = new LoginPage();
     const tagNewPage = new TagNewPage();
     const tagListPage = new TagListPage();
@@ -24,7 +24,7 @@ describe('Gestión de Tags - Asociar tag a post', () => {
         tagNewPage.saveCreateTag();
     }
 
-    it.only('Asociar Tag a page', () => {
+    it.only('Asociar tag a page', () => {
 
         //Crear un tag
         const tagData = {
