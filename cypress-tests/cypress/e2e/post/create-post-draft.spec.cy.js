@@ -35,7 +35,7 @@ describe('Creación de un Post en estado Draft', () => {
         
         cy.get('@idPostElement').then((idPostElement) => {
             cy.get('[data-test-post-id="'+idPostElement+'"]')
-            .contains('.gh-content-entry-title', postTitle)
+            .contains('.gh-content-entry-status', 'Draft')
         })
 
     
