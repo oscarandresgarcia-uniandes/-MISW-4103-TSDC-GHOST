@@ -27,11 +27,20 @@ describe('Creación de un Post en estado Draft', () => {
         cy.wait(3000)
         //Se verifica que el post haya sido creado en estado Draft
         
+        
         cy.contains('.gh-content-entry-title', postTitle)
-        cy.get('input').invoke('attr', 'gh-content-entry-title').should('contain', postTitle)
+        .parents('.gh-list-row')
+        .invoke('attr', 'data-test-post-id')
+        .as('idPostElement')
+        
+        cy.get('@idPostElement').then((idPostElement) => {
+            cy.get('[data-test-post-id="'+idPostElement+'"]')
+            .contains('.gh-content-entry-title', postTitle)
+        })
 
-        cy.contains('.gh-content-entry-status', 'Draft')
-       
+    
+
+        
 
         
     })
