@@ -30,7 +30,7 @@ describe('Gestión de Páginas - Crear Página exitosa (Scheduled)', () => {
         // navegar al listado de páginas
         pageListPage.visit();
 
-        //La pagina está creada comom published
-        pageContentPage.pageExists(pageData, 'Scheduled');
+        //La pagina está creada comom scheduled
+        pageListPage.pageExists(pageData, 'Scheduled');
     });
 });

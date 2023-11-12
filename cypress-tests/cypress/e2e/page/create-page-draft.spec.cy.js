@@ -17,7 +17,7 @@ describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
         pageContentPage.visit();
         
         const pageData = {
-            title: faker.lorem.words(3),
+            title: faker.word.words(3),
             content: faker.lorem.paragraphs(1),
         };
 
@@ -29,6 +29,6 @@ describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
        
 
         //La pagina está creada en draft
-        pageContentPage.pageExists(pageData);
+        pageListPage.pageExists(pageData, 'Draft');
     });
 });

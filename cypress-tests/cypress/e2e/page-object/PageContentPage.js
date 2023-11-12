@@ -10,12 +10,6 @@ class PageContentPage {
       cy.get('.kg-prose p').type(pageData.content);
     }
 
-    pageExists(pageData, status = 'Draft') {
-      cy.get('.gh-content-entry-title').contains(pageData.title)
-      .parent()
-      .find('.gh-content-entry-status').contains(status);
-    }
-
     publishPage(){
       cy.get('button[data-test-button="publish-flow"]').click();
       cy.get('button[data-test-button="continue"]').click();
@@ -28,6 +22,12 @@ class PageContentPage {
       cy.get('.gh-radio ').contains('Schedule for later').click();
       cy.get('button[data-test-button="continue"]').click();
       cy.get('button[data-test-button="confirm-publish"]').click();
+    }
+
+    unpublishPage(){
+      cy.get('.gh-unpublish-trigger').click();
+      cy.get('button[data-test-button="revert-to-draft"]').click();
+      cy.wait(1000);
     }
 }
 
