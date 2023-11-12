@@ -37,6 +37,16 @@ class PageContentPage {
       cy.get('.gh-btn-red').click();
     }
 
+    editPage(pageData){
+      if(pageData.title){
+        cy.get('.gh-editor-title').clear().type(pageData.title);
+      }
+      
+      if(pageData.content){
+        cy.get('.kg-prose p').clear().type(pageData.content);
+      }
+    }
+
     addTag(tagName){
       cy.get('button.settings-menu-toggle').click();
       cy.get('#tag-input input').click();

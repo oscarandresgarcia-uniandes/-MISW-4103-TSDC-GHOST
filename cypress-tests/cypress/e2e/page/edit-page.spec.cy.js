@@ -3,7 +3,7 @@ import PageContentPage from '../page-object/PageContentPage';
 import PageListPage from '../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Páginas - Borrar página', () => {
+describe('Gestión de Páginas - Editar página', () => {
     const loginPage = new LoginPage();
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
@@ -13,12 +13,16 @@ describe('Gestión de Páginas - Borrar página', () => {
         loginPage.login();
     });
 
-    it.only('Borrar página', () => {
+    it.only('Editar página', () => {
         pageContentPage.visit();
         
         const pageData = {
             title: faker.word.words(3),
             content: faker.lorem.paragraphs(1),
+        };
+
+        const editPageData = {
+            title: faker.word.words(3)
         };
 
         // Crear una nueva página
@@ -33,13 +37,13 @@ describe('Gestión de Páginas - Borrar página', () => {
         //Ir a la página creada
         pageListPage.navigateToPageByTitle(pageData.title);
 
-        //borrar la página
-        pageContentPage.deletePage();
+        //Editar la página
+        pageContentPage.editPage(editPageData);
         
         // navegar al listado de páginas
         pageListPage.visit();
 
-        //La pagina está eliminada
-        pageListPage.pageNotExist(pageData);
+        //La pagina existe con el titulo actualizado
+        pageListPage.pageExists(editPageData);
     });
 });
