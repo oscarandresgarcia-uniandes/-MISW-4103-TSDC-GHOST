@@ -4,7 +4,7 @@ import MemberNewPage from '../page-object/MemberNewPage';
 import MemberListPage from '../page-object/MemberListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Creación de un Miembro en la aplicación', () => {
+describe('Edición de un Miembro en la aplicación', () => {
     
     const loginPage = new LoginPage();
     const memberPage = new MemberNewPage();
@@ -16,7 +16,7 @@ describe('Creación de un Miembro en la aplicación', () => {
         loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
     })
 
-    it('Test para crear un nuevo miembro de manera exitosa', () => {
+    it('Test para editar un miembro de manera exitosa', () => {
         const memName = faker.person.fullName();
         const memEmail = faker.internet.email();
         const memLabel = faker.lorem.words(1);
