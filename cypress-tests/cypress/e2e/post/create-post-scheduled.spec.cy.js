@@ -4,7 +4,7 @@ import PostNewPage from '../page-object/PostNewPage';
 import PostListPage from '../page-object/PostListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Creación de un Post en estado Published', () => {
+describe('Creación de un Post en estado Scheduled', () => {
     
     const loginPage = new LoginPage();
     const postPage = new PostNewPage();
@@ -16,7 +16,7 @@ describe('Creación de un Post en estado Published', () => {
         loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
     })
 
-    it('Test para crear un Post en estado Published de manera exitosa', () => {
+    it('Test para crear un Post en estado Scheduled de manera exitosa', () => {
         const postTitle = faker.lorem.words(5);
         const postTextContent = faker.lorem.paragraph();
 
@@ -25,7 +25,7 @@ describe('Creación de un Post en estado Published', () => {
         cy.wait(3000)
         //Se crea un nuevo post y se regresa a la página anterior sin publicar
         postPage.createPost(postTitle,postTextContent)
-        postPage.submitPost('Publish')
+        postPage.submitPost('Scheduled')
         cy.wait(3000)
         //Se verifica que el post haya sido creado en estado Published
         postListPage.visit();
@@ -37,7 +37,7 @@ describe('Creación de un Post en estado Published', () => {
         
         cy.get('@idPostElement').then((idPostElement) => {
             cy.get('[data-test-post-id="'+idPostElement+'"]')
-            .contains('.gh-content-entry-status', 'Published')
+            .contains('.gh-content-entry-status', 'Scheduled')
         })
 
         

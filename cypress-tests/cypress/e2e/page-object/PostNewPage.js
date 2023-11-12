@@ -37,7 +37,19 @@ class PostNewPage {
                 cy.get('[data-test-button="confirm-publish"]').click()
                 break;
             case 'Scheduled':
-                
+                //Se utiliza el valor del sistema por defecto que publica el post en 10 minutos
+                cy.get('[data-test-button="publish-flow"]').click()
+                cy.wait(2000)
+
+                cy.get('[data-test-setting="publish-at"]')
+                .find('button')
+                .click()
+                cy.wait(2000)
+                cy.get('[data-test-radio="schedule"]').click({force: true})
+                cy.wait(2000)
+                cy.get('[data-test-button="continue"]').click()
+                cy.wait(2000)
+                cy.get('[data-test-button="confirm-publish"]').click()
                 break;
             default:
                 cy.get('[data-test-link="posts"]').click();
