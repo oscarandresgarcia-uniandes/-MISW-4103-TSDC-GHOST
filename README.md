@@ -9,7 +9,7 @@
 * Ubíquese en el directorio cypress-tests
 * Ejecute el comando ```npm install```
 * Abra el archivo ubicado en ```environments/environment.js``` y cambie el puerto si es necesario de acuerdo a su instalación de Ghost
-* En el mismo archivo ```environments/environment.js``` ponga el usuario ypassword de acuerdo a las credenciales escogidas para la creación del usuario administrador
+* En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador
 * Para correr las pruebas ejecute ```npx cypress run```
 * Opcional: Para correr las pruebas desde la GUI de Cypress ejecute ```npx cypress open```
   * seleccione E2E Testing
