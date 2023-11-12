@@ -30,6 +30,13 @@ class PageContentPage {
       cy.wait(1000);
     }
 
+    deletePage(){
+      cy.get('button.settings-menu-toggle').click();
+      cy.get('.settings-menu-delete-button button').click();
+      cy.wait(500);
+      cy.get('.gh-btn-red').click();
+    }
+
     addTag(tagName){
       cy.get('button.settings-menu-toggle').click();
       cy.get('#tag-input input').click();

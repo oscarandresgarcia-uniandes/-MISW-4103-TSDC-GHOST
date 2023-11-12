@@ -11,6 +11,10 @@ class PageListPage {
       .find('.gh-content-entry-status').contains(status);
     }
 
+    pageNotExist(pageData) {
+      cy.get('.gh-content-entry-title').contains(pageData.title).should('not.exist');
+    }
+
     navigateToPageByTitle(title) {
       cy.get('.gh-posts-list-item .gh-content-entry-title').contains(title).click();
     }
