@@ -30,8 +30,12 @@ class PostNewPage {
                 cy.get('[data-test-link="posts"]').click()
               break;
             case 'Publish':
-              
-              break;
+                cy.get('[data-test-button="publish-flow"]').click()
+                cy.wait(2000)
+                cy.get('[data-test-button="continue"]').click()
+                cy.wait(2000)
+                cy.get('[data-test-button="confirm-publish"]').click()
+                break;
             case 'Scheduled':
                 
                 break;
