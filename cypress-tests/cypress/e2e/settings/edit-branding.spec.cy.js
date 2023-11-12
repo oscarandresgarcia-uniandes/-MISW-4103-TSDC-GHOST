@@ -10,7 +10,7 @@ describe('Setup inicial para registrar un nuevo usuario en la aplicación', () =
         //Se hace login del usuario 
         loginPage.visit();
         cy.wait(1000)
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     })
 
     it('Test para editar el color (branding) del Site', () => {

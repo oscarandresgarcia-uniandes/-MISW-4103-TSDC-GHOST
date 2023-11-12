@@ -11,7 +11,7 @@ describe('Gestión de Tags - Crear Tag Con datos inválidos y requeridos', () =>
 
     beforeEach(() => {
         loginPage.visit();
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     });
 
     it.only('Crear Tag con parámetros invalidos y requeridos', () => {

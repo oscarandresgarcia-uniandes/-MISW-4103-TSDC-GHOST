@@ -13,7 +13,7 @@ describe('Borrado de un Miembro en la aplicación', () => {
         //Se hace login del usuario 
         loginPage.visit();
         cy.wait(1000)
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     })
 
     it('Test para eliminar un miembro de manera exitosa', () => {

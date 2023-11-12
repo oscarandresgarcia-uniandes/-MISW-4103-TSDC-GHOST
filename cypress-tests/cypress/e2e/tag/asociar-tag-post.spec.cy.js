@@ -16,7 +16,7 @@ describe('Asociar tag a post', () => {
         //Se hace login del usuario 
         loginPage.visit();
         cy.wait(1000)
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     });
 
     function createTag(tagData) {

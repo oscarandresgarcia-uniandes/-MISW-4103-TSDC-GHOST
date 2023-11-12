@@ -11,7 +11,7 @@ describe('Creación de un Post en estado Draft', () => {
         //Se hace login del usuario 
         loginPage.visit();
         cy.wait(1000)
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     })
 
     it('Test para crear un Post en estado Draft de manera exitosa', () => {

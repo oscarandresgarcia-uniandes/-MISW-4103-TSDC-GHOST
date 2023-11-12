@@ -13,7 +13,7 @@ describe('Edición de un Post en estado Published', () => {
         //Se hace login del usuario 
         loginPage.visit();
         cy.wait(1000)
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     })
 
     it('Test para editar un Post creado previamente de manera exitosa', () => {
