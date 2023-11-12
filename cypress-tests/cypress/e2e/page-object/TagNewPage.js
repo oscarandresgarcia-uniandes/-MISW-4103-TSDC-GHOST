@@ -23,9 +23,26 @@ class TagNewPage {
       });
     }
 
+    clearFields() {
+      cy.get('#tag-name').clear();
+      cy.get('input[data-test-input="accentColor"]').clear();
+      cy.get('#tag-slug').clear();
+      cy.get('#tag-slug').clear();
+      cy.get('#tag-description').clear();
+    }
+
     saveCreateTag() {
       cy.get('button[data-test-button="save"]').click();
       
+    }
+
+    invalidTagData(validationList) {
+      validationList.forEach(element => {
+        cy.contains(element);
+      });
+
+      //Intentar de nuevo con otra imagen
+      cy.get('button.gh-btn.gh-btn-green').click();
     }
 
     //Cuando un tag es guardado, debe visualizarse el botón de borrar tag
