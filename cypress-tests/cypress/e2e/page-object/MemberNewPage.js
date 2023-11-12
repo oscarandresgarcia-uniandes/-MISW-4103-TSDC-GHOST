@@ -59,6 +59,18 @@ class MemberNewPage {
         cy.wait(1000);
     }
 
+    //Borrar Miembro
+    deleteMember(){
+        cy.get('button[data-test-button="member-actions"]').click();
+        cy.wait(1000);
+        cy.get('button[data-test-button="delete-member"]').click();
+        cy.wait(1000);
+        cy.get('button[data-test-button="confirm"]').click();
+        cy.wait(1000);
+        
+    }
+
+
     
 
 }
