@@ -8,6 +8,11 @@ class MemberNewPage {
         cy.visit(environment.baseUrl + 'members/new');
     }
 
+    //Ir a página de edicion de miembros
+    visitEdit(idMember) {
+        cy.visit(environment.baseUrl + 'members/'+idMember);
+    }
+
     //Editar campos de Miembro
     editName(name){
         cy.get('input[id="member-name"]').clear().type(name) 
@@ -31,11 +36,30 @@ class MemberNewPage {
 
     }
 
+    //Obtener información del miembro
+    getName(){
+        return cy.get('input[id="member-name"]').invoke('val')
+    }
+
+    getEmail(){
+        return cy.get('input[id="member-email"]').invoke('val')
+    }
+
+    getLabels(){
+        return cy.get('.ember-power-select-trigger-multiple-input').invoke('val')
+    }
+
+    getNote(){
+        return cy.get('textarea[name="note"]').invoke('val')
+    }
+
     //Guardar Miembro
     saveMember(){
         cy.get('button[data-test-button="save"]').click();
         cy.wait(1000);
     }
+
+    
 
 }
 
