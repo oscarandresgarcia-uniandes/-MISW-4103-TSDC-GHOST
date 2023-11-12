@@ -60,10 +60,33 @@ class PostNewPage {
                     cy.get('[data-test-button="publish-save"]').click()
                     cy.wait(2000)
                     break;
+            case 'Delete':
+                    cy.get('.gh-main')
+                    .find('button[title="Settings"]')
+                    .click();
+                    cy.wait(2000)
+                    cy.get('.settings-menu-delete-button')
+                        .find('button')
+                        .click()
+                    cy.wait(2000)
+                    cy.get('.modal-footer')
+                    .find('.gh-btn-red')
+                    .click();
+                    
+                    
+
+                    break;
             default:
                 cy.get('[data-test-link="posts"]').click();
         }
         
+    }
+
+    //Eliminar un Post 
+    deletePost(){
+        this.editTitle(title)
+        this.editBody(body)
+
     }
 
 }
