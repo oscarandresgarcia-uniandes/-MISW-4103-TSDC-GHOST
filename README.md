@@ -2,10 +2,10 @@
 
 ## Integrantes del grupo
 
-Oscar Andrés García (oa.garcia2@uniandes.edu.co)
-Samuel Lopez (sr.lopezb@uniandes.edu.co)
-Bryand Salamanca (b.salamanca@uniandes.edu.co)
-Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
+*Oscar Andrés García (oa.garcia2@uniandes.edu.co)
+*Samuel Lopez (sr.lopezb@uniandes.edu.co)
+*Bryand Salamanca (b.salamanca@uniandes.edu.co)
+*Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
 
 
 ## Instrucciones para correr pruebas en Cypress:
