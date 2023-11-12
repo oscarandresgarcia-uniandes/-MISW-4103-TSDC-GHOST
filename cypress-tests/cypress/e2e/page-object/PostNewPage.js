@@ -8,6 +8,11 @@ class PostNewPage {
         cy.visit(environment.baseUrl + 'editor/post');
     }
 
+    //Ir a página de edicion de posts
+    visitEdit(idPost) {
+        cy.visit(environment.baseUrl + 'editor/post/'+idPost);
+    }
+
     //Editar Título del Post
     editTitle(text){
         cy.get('.gh-editor-title').clear().type(text)
@@ -51,6 +56,10 @@ class PostNewPage {
                 cy.wait(2000)
                 cy.get('[data-test-button="confirm-publish"]').click()
                 break;
+            case 'Update':
+                    cy.get('[data-test-button="publish-save"]').click()
+                    cy.wait(2000)
+                    break;
             default:
                 cy.get('[data-test-link="posts"]').click();
         }
