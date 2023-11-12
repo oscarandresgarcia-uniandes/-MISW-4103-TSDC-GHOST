@@ -23,7 +23,7 @@ describe('Creación de un Post en estado Published', () => {
         //Se accede a página de creación de Posts
         postPage.visit();
         cy.wait(3000)
-        //Se crea un nuevo post y se regresa a la página anterior sin publicar
+        //Se crea un nuevo post
         postPage.createPost(postTitle,postTextContent)
         postPage.submitPost('Publish')
         cy.wait(3000)

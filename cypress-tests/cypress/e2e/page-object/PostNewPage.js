@@ -22,6 +22,16 @@ class PostNewPage {
         cy.get('.kg-prose p').clear().type(text) 
     }
 
+    //Editar tag del Post
+    editTag(tagName){
+        cy.get('.gh-main')
+                    .find('button[title="Settings"]')
+                    .click();
+                    cy.wait(2000)
+        cy.get('#tag-input input').click();
+        cy.get('.ember-power-select-option').contains(tagName).click();
+    }
+
     //Crear nuevo Post con opción de diferentes estados
     createPost(title,body){
         this.editTitle(title)
