@@ -15,6 +15,12 @@ class PageContentPage {
       .parent()
       .find('.gh-content-entry-status').contains(status);
     }
+
+    publishPage(){
+      cy.get('button[data-test-button="publish-flow"]').click();
+      cy.get('button[data-test-button="continue"]').click();
+      cy.get('button[data-test-button="confirm-publish"]').click();
+    }
 }
 
 export default PageContentPage;

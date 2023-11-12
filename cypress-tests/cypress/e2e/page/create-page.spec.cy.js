@@ -1,6 +1,6 @@
 import LoginPage from '../page-object/LoginPage';
 import PageContentPage from '../page-object/PageContentPage';
-import PageListPage from '../page-object/PageListObject';
+import PageListPage from '../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
 describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
