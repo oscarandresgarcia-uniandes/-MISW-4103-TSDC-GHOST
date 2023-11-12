@@ -12,15 +12,17 @@ class TagNewPage {
       cy.get('#tag-slug').type(tagData.slug);
       cy.get('#tag-description').type(tagData.description);
       
-      cy.fixture(tagData.image.name, 'binary')
-      .then(Cypress.Blob.binaryStringToBlob)
-      .then(fileContent => {
-        cy.get('input[type="file"]').attachFile({
-          fileContent: fileContent,
-          fileName: tagData.image.name,
-          mimeType: tagData.image.type
+      if(tagData.image) {
+        cy.fixture(tagData.image.name, 'binary')
+        .then(Cypress.Blob.binaryStringToBlob)
+        .then(fileContent => {
+          cy.get('input[type="file"]').attachFile({
+            fileContent: fileContent,
+            fileName: tagData.image.name,
+            mimeType: tagData.image.type
+          });
         });
-      });
+      }
     }
 
     clearFields() {
