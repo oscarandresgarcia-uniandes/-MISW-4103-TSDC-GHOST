@@ -11,7 +11,7 @@ describe('Gestión de Tags - Crear Tag Exitoso', () => {
 
     beforeEach(() => {
         loginPage.visit();
-        loginPage.login('oa.garcia2@uniandes.edu.co', 'Sqlserver2005!');
+        loginPage.login();
     });
 
     it.only('Crear Tag Exitoso', () => {
