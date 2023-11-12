@@ -82,12 +82,5 @@ class PostNewPage {
         
     }
 
-    //Eliminar un Post 
-    deletePost(){
-        this.editTitle(title)
-        this.editBody(body)
-
-    }
-
 }
 export default PostNewPage;
