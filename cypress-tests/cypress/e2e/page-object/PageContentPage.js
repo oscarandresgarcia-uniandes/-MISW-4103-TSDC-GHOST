@@ -29,6 +29,12 @@ class PageContentPage {
       cy.get('button[data-test-button="revert-to-draft"]').click();
       cy.wait(1000);
     }
+
+    addTag(tagName){
+      cy.get('button.settings-menu-toggle').click();
+      cy.get('#tag-input input').click();
+      cy.get('.ember-power-select-option').contains(tagName).click();
+    }
 }
 
 export default PageContentPage;

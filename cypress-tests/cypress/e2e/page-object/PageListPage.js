@@ -14,6 +14,12 @@ class PageListPage {
     navigateToPageByTitle(title) {
       cy.get('.gh-posts-list-item .gh-content-entry-title').contains(title).click();
     }
+
+    filterbyTag(tagName){
+      cy.wait(1000);
+      cy.get('.gh-contentfilter-tag').click();
+      cy.get('.ember-power-select-options li').contains(tagName).click();
+    }
 }
 
 export default PageListPage;
