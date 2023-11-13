@@ -6,6 +6,8 @@ class PostListPage {
     //Ir a página de listado de posts
     visit() {
         cy.visit(environment.baseUrl + 'posts');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
 }

@@ -6,11 +6,15 @@ class MemberNewPage {
     //Ir a página de creación de miembros
     visit() {
         cy.visit(environment.baseUrl + 'members/new');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
     //Ir a página de edicion de miembros
     visitEdit(idMember) {
         cy.visit(environment.baseUrl + 'members/'+idMember);
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
     //Editar campos de Miembro

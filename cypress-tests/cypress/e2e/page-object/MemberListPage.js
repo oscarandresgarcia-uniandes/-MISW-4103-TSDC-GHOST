@@ -6,6 +6,8 @@ class MemberListPage {
     //Ir a página de listado de miembros
     visit() {
         cy.visit(environment.baseUrl + 'members');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
 }

@@ -6,11 +6,15 @@ class PostNewPage {
     //Ir a página de creacion de posts
     visit() {
         cy.visit(environment.baseUrl + 'editor/post');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
     //Ir a página de edicion de posts
     visitEdit(idPost) {
         cy.visit(environment.baseUrl + 'editor/post/'+idPost);
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
     //Editar Título del Post
@@ -75,6 +79,7 @@ class PostNewPage {
                     .find('button[title="Settings"]')
                     .click();
                     cy.wait(2000)
+                    cy.window().scrollTo('bottom', { ensureScrollable: false });
                     cy.get('.settings-menu-delete-button')
                         .find('button')
                         .click()

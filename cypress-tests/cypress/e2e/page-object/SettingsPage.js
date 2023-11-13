@@ -6,11 +6,15 @@ class SettingsPage {
     //Ir a página de settings
     visit() {
         cy.visit(environment.baseUrl + 'settings');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
     /* MÉTODOS PARA DESIGN & BRANDING*/
     //Ir a página de diseño del sitio
     visitDesignPage() {
         cy.visit(environment.baseUrl + 'settings/design');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
     //Seleccionar botón para customizar Branding

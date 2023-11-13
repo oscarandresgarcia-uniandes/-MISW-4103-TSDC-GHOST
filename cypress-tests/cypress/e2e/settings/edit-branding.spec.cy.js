@@ -3,7 +3,7 @@ import LoginPage from '../page-object/LoginPage';
 import SettingsPage from '../page-object/SettingsPage';
 import { faker } from '@faker-js/faker';
 
-describe('Setup inicial para registrar un nuevo usuario en la aplicación', () => {
+describe('Edición del Branding del Site creado', () => {
     const settingsPage = new SettingsPage();
     const loginPage = new LoginPage();
     beforeEach(()=>{
