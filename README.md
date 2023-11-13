@@ -23,3 +23,17 @@
   * seleccione El navegador deseado 
   * Haga click en el botón Start E2E Testing
   * Seleccione el spec que desea correr
+
+## Instrucciones para correr pruebas en Kraken:
+* Instale la versión mas reciente de Ghost en su entorno local. ver https://ghost.org/docs/install/local/
+* En su navegador vaya a http://localhost:2368/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto si es necesario de acuerdo a su instalación)
+* instale la kraken https://misovirtual.virtual.uniandes.edu.co/codelabs/kraken-testing-tool/index.html?index=..%2F..index#0
+* En un computador con el sistema operativo windows 10
+* Instale una versión de node (se recomienda v16.14.2)
+* Clone este repositorio
+* Ubíquese en el directorio donde se encuentra la carpeta kraken de este repositorio
+* Modifique el archivo ```properties.json```
+* en el formato de este archivo coloque sus credenciales de ingreso a ghost 
+* Ejecute el comando ```npx kraken-node run```
+* Se ejecutaran todas las pruebas
+
