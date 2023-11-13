@@ -1,0 +1,595 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "iniciar-una-conversación;editar-pages",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Editar pages",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 981000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 5,
+            "name": "I wait for 5 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5147000000
+            },
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABKAAAAL6CAYAAAABnC4XAAAAAXNSR0IArs4c6QAAFJVJREFUeJzt2EENACAQwDDAv+dDxUJCWgV7b8/MLAAAAACInNcBAAAAAPzNgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQOoCk64J8G8MeI8AAAAASUVORK5CYII=",
+                "mime_type": "image/png"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter email \"sr.lopezb@uniandes.edu.co\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:4"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 3137000000,
+              "error_message": "Error: Can't call setValue on element with selector \"#identification\" because element wasn't found\n    at implicitWait (C:\\Users\\Samuel Lopez\\node_modules\\webdriverio\\build\\utils\\implicitWait.js:34:19)\n    at async Element.elementErrorHandlerCallbackFn (C:\\Users\\Samuel Lopez\\node_modules\\webdriverio\\build\\middlewares.js:20:29)\n    at async Element.wrapCommandFn (C:\\Users\\Samuel Lopez\\node_modules\\@wdio\\utils\\build\\shim.js:136:29)\n    at async KrakenWorld.<anonymous> (C:\\Users\\Samuel Lopez\\Desktop\\Pruebas automatizadas miso\\features\\web\\step_definitions\\step.js:6:12)"
+            },
+            "embeddings": [
+              {
+                "data": "iVBORw0KGgoAAAANSUhEUgAABKAAAAL6CAYAAAABnC4XAAAAAXNSR0IArs4c6QAAFJVJREFUeJzt2EENACAQwDDAv+dDxUJCWgV7b8/MLAAAAACInNcBAAAAAPzNgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQMqAAgAAACBlQAEAAACQMqAAAAAASBlQAAAAAKQMKAAAAABSBhQAAAAAKQMKAAAAgJQBBQAAAEDKgAIAAAAgZUABAAAAkDKgAAAAAEgZUAAAAACkDCgAAAAAUgYUAAAAACkDCgAAAICUAQUAAABAyoACAAAAIGVAAQAAAJAyoAAAAABIGVAAAAAApAwoAAAAAFIGFAAAAAApAwoAAACAlAEFAAAAQOoCk64J8G8MeI8AAAAASUVORK5CYII=",
+                "mime_type": "image/png"
+              }
+            ]
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I enter password \"8*#!p4scb*h4*mX\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:8"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click next",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:12"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I wait for 7 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:187"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I click new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:192"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "I enter title_pages \"Pagina de prueba 121212\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:197"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I click new_description_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:202"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "I enter description_pages \"Uniandes pruebas kraken \"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:207"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 21,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 22,
+            "name": "I click options_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:234"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click options_schedule_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:239"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I wait for 2 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I enter schedule_new_pages \"2023-11-01\"",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:244"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I click save_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:219"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I wait for 6 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I click confirm_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:224"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I wait for 6 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I click reconfirm_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:229"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 33,
+            "name": "I wait for 6 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 34,
+            "name": "I click back_to_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:249"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I wait for 5 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 36,
+            "name": "I click return_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:214"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I click edite_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:254"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I click confirm_draft_page",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:277"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "I click reconfirm_draft_page",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:282"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "I wait for 1 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "I click return_new_pages",
+            "match": {
+              "location": "features\\web\\step_definitions\\step.js:214"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "I wait for 3 seconds",
+            "match": {
+              "location": "..\\..\\node_modules\\kraken-node\\lib\\steps\\both.js:73"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 12000000
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@user1",
+            "line": 3
+          },
+          {
+            "name": "@web",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "iniciar-una-conversación",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Iniciar una conversación",
+    "tags": [],
+    "uri": "features\\my_first.feature"
+  }
+]
