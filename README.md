@@ -33,7 +33,9 @@
 * Clone este repositorio
 * Ubíquese en el directorio donde se encuentra la carpeta kraken de este repositorio
 * Modifique el archivo ```properties.json```
-* en el formato de este archivo coloque sus credenciales de ingreso a ghost 
+* en el formato de este archivo coloque sus credenciales de ingreso a ghost
+* Ingrese a la ruta donde ```/features/pruebas``` y copie el archivo de pruebas que quiere ejecutar y peguelo en la ruta ```/features```
+* Recuerde que las pruebas deben ejecutarse en orden : Ejemplo (Prueba_1,Prueba_2...Prueba_n..Prueba_n+1)
 * Ejecute el comando ```npx kraken-node run```
-* Se ejecutaran todas las pruebas
+* Se ejecuta la prueba deseada. 
 
