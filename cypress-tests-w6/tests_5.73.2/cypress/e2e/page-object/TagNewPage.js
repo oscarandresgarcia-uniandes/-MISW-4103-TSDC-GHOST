@@ -25,7 +25,7 @@ class TagNewPage {
         });
         cy.ghostscreenshot('new tag page with image');
       } else {
-        cy.ghostscreenshot('new tag page');
+        cy.ghostscreenshot('new tag page no image');
       }
     }
 
@@ -50,7 +50,6 @@ class TagNewPage {
 
       //Intentar de nuevo con otra imagen
       cy.get('button.gh-btn.gh-btn-green').click();
-      cy.ghostscreenshot('save tag invalid data');
       cy.ghostscreenshot('new tag validation errors');
     }
 
