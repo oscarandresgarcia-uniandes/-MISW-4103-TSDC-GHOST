@@ -3,6 +3,7 @@ import {environment} from '../environments/environment';
 class TagEditPage {
     visit(slug) {
         cy.visit(environment.baseUrl + 'tags/' + slug);
+        cy.ghostscreenshot('visit tag edit page');
     }
 
     imageExists(tagData) {
@@ -17,7 +18,7 @@ class TagEditPage {
 
     deleteTag(){
         cy.get('button[data-test-button="delete-tag"]').click();
-        cy.wait(500);
+        cy.ghostscreenshot('delete tag');
         cy.get('.modal-footer button[data-test-button="confirm').click();
     }
 }

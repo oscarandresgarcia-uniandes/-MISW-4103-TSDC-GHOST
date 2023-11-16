@@ -16,7 +16,6 @@ describe('Gestión de Tags - Crear Tag Exitoso', () => {
 
     it.only('Crear Tag Exitoso', () => {
         tagNewPage.visit();
-        //tagListPage.navigateToNewTagPage();
 
         const tagData = {
             name: 'Nuevo Tag',

@@ -4,6 +4,7 @@ class LoginPage {
     
     visit() {
        cy.visit(environment.baseUrl + 'signin');
+       cy.ghostscreenshot('visit login page');
     }
 
     //Método para crear un nuevo usuario en la aplicación

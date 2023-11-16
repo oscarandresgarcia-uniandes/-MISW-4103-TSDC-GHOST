@@ -25,6 +25,6 @@ import 'cypress-file-upload';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('ghostscreenshot', (name_string) => {
-    cy.wait(500);
+    cy.wait(800);
     cy.screenshot(`${Cypress.spec.name}/${name_string}`);
   });
