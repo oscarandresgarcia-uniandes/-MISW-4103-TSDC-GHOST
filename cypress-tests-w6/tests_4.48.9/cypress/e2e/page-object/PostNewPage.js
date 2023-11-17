@@ -23,7 +23,7 @@ class PostNewPage {
     }
     //Editar cuerpo del Post
     editBody(text){
-        cy.get('.kg-prose p').clear().type(text) 
+        cy.get('[data-kg="editor"]').clear().type(text) 
     }
 
     //Editar tag del Post
@@ -43,10 +43,21 @@ class PostNewPage {
 
     }
 
+    //Obtener estado de un post en la lista con base en el título del post
+    getPostStatusByTitle(postTitle){
+
+        cy.contains('.gh-post-list-title', postTitle)
+        .parent()     
+        .contains('.gh-post-list-status', 'Draft')
+
+    }
+
     submitPost(status){
         switch (status) {
             case 'Draft':
-                cy.get('[data-test-link="posts"]').click()
+                cy.get('a[href*="#/posts"]')
+                .contains('Posts')
+                .click()
               break;
             case 'Publish':
                 cy.get('[data-test-button="publish-flow"]').click()
