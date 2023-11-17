@@ -19,28 +19,28 @@ class SettingsPage {
 
     //Seleccionar botón para customizar Branding
     clickOnCustomizeDesign() {
-        cy.get('[data-testid="design"]')
-            .contains('button', 'Customize')
+        cy.get('.gh-nav-list')
+            .contains('button', 'Brand')
             .click()
     }
 
     //Obtener descripción del Site
     getSiteDescription(){
-        return cy.get('input[id=":ro:"]').invoke('val')
+        return cy.get('input[id="site-description"]').invoke('val')
     }
     //Editar descripción del Site
     editSiteDescription(description){
-        cy.get('input[id=":ro:"]').clear().type(description)
+        cy.get('input[id="site-description"]').clear().type(description)
     }
 
     //Obtener Accent Color del Site
     getAccentColor(){
-        return cy.get('input[aria-label="Color value"]').invoke('val')
+        return cy.get('input[id="accent-color"]').invoke('val')
     }
 
     //Editar Accent color del Site
     editAccentColor(colorHex){
-        cy.get('input[aria-label="Color value"]').clear().type(colorHex)
+        cy.get('input[id="accent-color"]').clear().type(colorHex)
     }
 
     //Guardar cambios realizados al Branding

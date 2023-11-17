@@ -15,13 +15,12 @@ describe('Edición del Branding del Site creado', () => {
 
     it('Test para editar el color (branding) del Site', () => {
         const titleSite = faker.lorem.words(5);
-        const colorSite = faker.color.rgb().toUpperCase();
+        const colorSite = faker.color.rgb().toUpperCase().replace("#", "");
         //Se accede a página de configuración del diseño
         settingsPage.visitDesignPage();
-        cy.wait(5000)
+        cy.wait(2000)
         //Se selecciona el botón para editar el Diseño y Branding
         settingsPage.clickOnCustomizeDesign();
-        cy.wait(3000)
         //Se edita la descripción del Site
         settingsPage.editSiteDescription(titleSite);
         //Se edita el accent color del Site
@@ -33,9 +32,12 @@ describe('Edición del Branding del Site creado', () => {
         settingsPage.closeBrandingWindow();
         cy.wait(1000)
         //Se verifica que los cambios hayan sido guardados
+        settingsPage.visit()
+        cy.wait(2000)
+        settingsPage.visitDesignPage();
+        cy.wait(2000)
         settingsPage.clickOnCustomizeDesign();
-
-        settingsPage.getAccentColor().then((description) => {
+        settingsPage.getSiteDescription().then((description) => {
             assert(titleSite,description)
         })
 
