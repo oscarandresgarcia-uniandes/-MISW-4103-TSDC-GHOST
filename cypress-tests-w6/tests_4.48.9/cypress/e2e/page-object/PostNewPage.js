@@ -46,9 +46,7 @@ class PostNewPage {
     //Obtener estado de un post en la lista con base en el título del post
     getPostStatusByTitle(postTitle){
 
-        cy.contains('.gh-post-list-title', postTitle)
-        .parent()     
-        .contains('.gh-post-list-status', 'Draft')
+        return cy.contains('.gh-post-list-title', postTitle).parent().contains('.gh-post-list-status', 'Draft').invoke('val')
 
     }
 
