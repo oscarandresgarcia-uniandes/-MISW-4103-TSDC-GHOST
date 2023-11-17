@@ -46,7 +46,7 @@ class PostNewPage {
     //Obtener estado de un post en la lista con base en el título del post
     getPostStatusByTitle(postTitle){
 
-        return cy.contains('.gh-post-list-title', postTitle).parent().contains('.gh-post-list-status', 'Draft').invoke('val')
+        return cy.contains('.gh-post-list-title', postTitle).parent().get('.gh-post-list-status').invoke('val')
 
     }
 
@@ -58,17 +58,25 @@ class PostNewPage {
                 .click()
               break;
             case 'Publish':
-                cy.get('[data-test-button="publish-flow"]').click()
+
+                cy.get('.gh-publishmenu-trigger')
+                .click()
                 cy.wait(2000)
-                cy.get('[data-test-button="continue"]').click()
+                cy.get('.gh-publishmenu-button')
+                .contains('button', 'Publish')
+                .click()
                 cy.wait(2000)
-                cy.get('[data-test-button="confirm-publish"]').click()
+                cy.get('.gh-btn')
+                .contains('button', 'Publish')
+                .click()
+                cy.wait(2000)
                 break;
             case 'Scheduled':
                 //Se utiliza el valor del sistema por defecto que publica el post en 10 minutos
                 cy.get('[data-test-button="publish-flow"]').click()
                 cy.wait(2000)
 
+                
                 cy.get('[data-test-setting="publish-at"]')
                 .find('button')
                 .click()

@@ -7,7 +7,8 @@ class PostListPage {
     visit() {
         cy.visit(environment.baseUrl + 'posts');
         cy.wait(3000)
-        cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.get('.gh-main').scrollTo('bottom')
+        
     }
 
 }

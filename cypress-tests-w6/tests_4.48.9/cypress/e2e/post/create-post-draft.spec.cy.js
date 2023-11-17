@@ -27,6 +27,8 @@ describe('Creación de un Post en estado Draft', () => {
         cy.wait(3000)
 
         //Se verifica que el post haya sido creado en estado Draft
+        postListPage.visit()
+        cy.wait(3000)
         const stats = postPage.getPostStatusByTitle(postTitle)
         assert(stats,'Draft')
     })
