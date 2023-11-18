@@ -72,20 +72,23 @@ class PostNewPage {
                 cy.wait(2000)
                 break;
             case 'Scheduled':
-                //Se utiliza el valor del sistema por defecto que publica el post en 10 minutos
-                cy.get('[data-test-button="publish-flow"]').click()
-                cy.wait(2000)
-
-                
-                cy.get('[data-test-setting="publish-at"]')
-                .find('button')
+                cy.get('.gh-publishmenu-trigger')
                 .click()
                 cy.wait(2000)
-                cy.get('[data-test-radio="schedule"]').click({force: true})
+
+                cy.get('.gh-publishmenu-radio')
+                .contains('Schedule it for later').parent().click();
                 cy.wait(2000)
-                cy.get('[data-test-button="continue"]').click()
+
+                cy.get('.gh-publishmenu-button')
+                .contains('Schedule').parent().click();
                 cy.wait(2000)
-                cy.get('[data-test-button="confirm-publish"]').click()
+
+                cy.get('.gh-btn')
+                .contains('button', 'Schedule')
+                .click()
+                cy.wait(2000)
+
                 break;
             case 'Update':
                     cy.get('[data-test-button="publish-save"]').click()
