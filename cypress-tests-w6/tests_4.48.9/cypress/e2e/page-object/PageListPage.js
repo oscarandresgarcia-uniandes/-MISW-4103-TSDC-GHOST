@@ -11,7 +11,8 @@ class PageListPage {
       cy.wait(500);
       cy.get('.gh-content-entry-title').contains(pageData.title)
       .parent()
-      .find('.gh-content-entry-status').contains(status);
+      .parent()
+      .find('.gh-post-list-status').contains(status);
     }
 
     pageNotExist(pageData) {

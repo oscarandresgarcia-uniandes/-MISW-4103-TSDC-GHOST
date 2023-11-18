@@ -8,41 +8,39 @@ class PageContentPage {
 
     contentPage(pageData) {
       cy.get('.gh-editor-title').type(pageData.title);
-      cy.get('.kg-prose p').type(pageData.content);
+      cy.get('.koenig-editor__editor').type(pageData.content);
       cy.ghostscreenshot('type page content');
     }
 
     publishPage(){
-      cy.get('button[data-test-button="publish-flow"]').click();
+      cy.get('.gh-publishmenu').click();
       cy.ghostscreenshot('publish page');
-      cy.get('button[data-test-button="continue"]').click();
+      cy.get('.gh-publishmenu-button').click();
       cy.ghostscreenshot('publish page continue');
-      cy.get('button[data-test-button="confirm-publish"]').click();
-      cy.ghostscreenshot('publish page confirtm');
+      //cy.ghostscreenshot('publish page confirtm');
     }
 
     schedulePage(){
-      cy.get('button[data-test-button="publish-flow"]').click();
+      cy.get('.gh-publishmenu').click();
       cy.ghostscreenshot('schedule page');
-      cy.get('.gh-publish-setting-trigger').contains('Right now').click();
-      cy.ghostscreenshot('schedule page now');
-      cy.get('.gh-radio ').contains('Schedule for later').click();
+      //cy.ghostscreenshot('schedule page now');
+      cy.get('.gh-publishmenu-radio').eq(1).click();
       cy.ghostscreenshot('schedule page later');
-      cy.get('button[data-test-button="continue"]').click();
+      cy.get('.gh-publishmenu-button').click();
       cy.ghostscreenshot('schedule page continue');
-      cy.get('button[data-test-button="confirm-publish"]').click();
-      cy.ghostscreenshot('schedule page confirm');
+      //cy.ghostscreenshot('schedule page confirm');
     }
 
     unpublishPage(){
-      cy.get('.gh-unpublish-trigger').click();
-      cy.get('button[data-test-button="revert-to-draft"]').click();
+      cy.get('.gh-publishmenu').click();
+      cy.get('.gh-publishmenu-radio').eq(0).click();
+      cy.get('.gh-publishmenu-button').click();
       cy.ghostscreenshot('unpublish page');
     }
 
     deletePage(){
       cy.get('button.settings-menu-toggle').click();
-      cy.get('.settings-menu-delete-button button').click();
+      cy.get('button.settings-menu-delete-button').click();
       cy.wait(500);
       cy.get('.gh-btn-red').click();
       cy.ghostscreenshot('delete page');
@@ -54,8 +52,9 @@ class PageContentPage {
       }
       
       if(pageData.content){
-        cy.get('.kg-prose p').clear().type(pageData.content);
+        cy.get('.koenig-editor__editor').clear().type(pageData.content);
       }
+      cy.get('.koenig-editor__editor').click();
       cy.ghostscreenshot('edit page');
     }
 
@@ -65,7 +64,9 @@ class PageContentPage {
       cy.get('#tag-input input').click();
       cy.ghostscreenshot('page add tag select');
       cy.get('.ember-power-select-option').contains(tagName).click();
+      cy.get('#custom-excerpt').type(' '); // se necesita actualizar otro elemento porque no hay botón de guardar :(
       cy.ghostscreenshot('page add tag');
+      cy.get('button.settings-menu-toggle').click();
     }
 }
 

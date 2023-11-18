@@ -7,10 +7,15 @@ class TagNewPage {
     }
 
     createTag(tagData) {
-      cy.get('#tag-name').type(tagData.name);
-      cy.get('input[data-test-input="accentColor"]').type(tagData.color);
-      cy.get('#tag-slug').clear();
-      cy.get('#tag-slug').type(tagData.slug);
+      if(tagData.name) {
+        cy.get('#tag-name').type(tagData.name);
+        cy.get('body').click(); //reportar bug
+      }
+      
+      cy.get('input[name="accent-color"].gh-input').type(tagData.color);
+      cy.get('#tag-slug')
+      .clear()
+      .type(tagData.slug, {force: true});
       cy.get('#tag-description').type(tagData.description);
       
       if(tagData.image) {
@@ -31,15 +36,23 @@ class TagNewPage {
 
     clearFields() {
       cy.get('#tag-name').clear();
-      cy.get('input[data-test-input="accentColor"]').clear();
-      cy.get('#tag-slug').clear();
+      cy.get('input[name="accent-color"].gh-input').clear();
       cy.get('#tag-slug').clear();
       cy.get('#tag-description').clear();
     }
 
-    saveCreateTag() {
-      cy.get('button[data-test-button="save"]').click();
-      cy.ghostscreenshot('save tag');
+    saveCreateTag(enablePrint=true, retryAction=false, save=true) {
+
+      const buttonAction = retryAction ? 'Retry' : 'Save';
+
+      if(save) {
+        cy.get('.view-actions button').contains(buttonAction).click();
+      }
+      
+
+      if(enablePrint) {
+        cy.ghostscreenshot('save tag');
+      }
       
     }
 
@@ -48,14 +61,14 @@ class TagNewPage {
         cy.contains(element);
       });
 
-      //Intentar de nuevo con otra imagen
-      cy.get('button.gh-btn.gh-btn-green').click();
+      cy.get('#tag-name').click();
       cy.ghostscreenshot('new tag validation errors');
+      cy.get('.image-delete').click();
     }
 
     //Cuando un tag es guardado, debe visualizarse el botón de borrar tag
     newTagCanBeDeleted() {
-      cy.get('button[data-test-button="delete-tag"]');
+      cy.get('button.gh-btn-red').contains('Delete tag');
     }
 }
 
