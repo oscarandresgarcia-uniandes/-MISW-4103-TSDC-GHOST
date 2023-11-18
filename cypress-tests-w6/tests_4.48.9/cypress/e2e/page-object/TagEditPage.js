@@ -17,9 +17,9 @@ class TagEditPage {
     }
 
     deleteTag(){
-        cy.get('button[data-test-button="delete-tag"]').click();
+        cy.get('button.gh-btn-red').contains('Delete tag').click();
         cy.ghostscreenshot('delete tag');
-        cy.get('.modal-footer button[data-test-button="confirm').click();
+        cy.get('.modal-footer button.gh-btn-red').contains('Delete').click();
     }
 }
 
