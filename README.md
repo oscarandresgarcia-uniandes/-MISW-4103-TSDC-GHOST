@@ -8,6 +8,10 @@
 * Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
 
 ## Semana 6
+
+## Listado de issues encontrados con las regresiones visuales y comparación VRT
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues?q=is%3Aopen+is%3Aissue+label%3AW6
+
 ## Instrucciones para correr las pruebas de regresión visual en Cypress:
 * Instale la versión de Ghost 5.73.2 en su entorno local:
 * ```npm install ghost-cli@latest -g```
