@@ -46,6 +46,7 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Pros-y-C
 * El script que genera el reporte está en esta misma carpeta cypress-tests-w6 y se llama index.js
 * para generar un nuevo reporte ejecute el comando ```node .```
 * Tenga en cuenta que se generarrá un reporte con todos los escenarios incluidos en los tests. Si desea generar un reporte con escenarios específicos, debe remover los specs que no desea incluir.
+* Puede configurar las opciones de resemble modificando los valores del archivo config.json
 
 ## Semana 5
 ## Instrucciones para correr pruebas en Cypress:
