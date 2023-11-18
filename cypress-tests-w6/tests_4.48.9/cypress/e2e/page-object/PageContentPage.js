@@ -1,8 +1,10 @@
 import {environment} from '../environments/environment';
+import {closeWarningOldVersion } from '../utilities';
 
 class PageContentPage {
     visit() {
       cy.visit(environment.baseUrl + 'editor/page');
+      closeWarningOldVersion();
       cy.ghostscreenshot('visit page editor');
     }
 
