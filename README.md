@@ -7,7 +7,40 @@
 * Bryand Salamanca (b.salamanca@uniandes.edu.co)
 * Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
 
+## Semana 6
+## Instrucciones para correr las pruebas de regresión visual en Cypress:
+* Instale la versión de Ghost 5.73.2 en su entorno local:
+* ```npm install ghost-cli@latest -g```
+* ```ghost install 5.73.2 local```
+* Instale la versión de Ghost 4.48.9 en su entorno local:
+* Instale docker descargando la app aquí: https://www.docker.com/get-started/
+* ```docker run -d -e url=http://localhost:8095 -p 8095:2368 --name ghost_4.48.9 ghost:4.48.9```
+* Tenga en cuenta los puertos donde corren ambas versiones y visite el sitio para cada versión de Ghost para crear el usuario administrador:
+* Para cada versión de Ghost, en su navegador vaya a http://localhost:<puerto>/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto de acuerdo a la instalación de cada versión)
+* Instale la versión de node v18.18.1
+* Clone este repositorio
+* Ghost 4.48.9: Ubíquese en el directorio cypress-tests-w6/tests_4.48.9
+* Ejecute el comando ```npm install```
+* Abra el archivo ubicado en ```cypress/e2e/environments/environment.js``` y cambie el puerto si es necesario de acuerdo a su instalación de Ghost 4.48.9
+* En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador Ghost 4.48.9
+* Para correr las pruebas y generar los screenshots de Ghost 4.48.9 ejecute ```npx cypress run```
+* Ghost 5.73.2: Ubíquese en el directorio cypress-tests-w6/tests_5.73.2
+* Ejecute el comando ```npm install```
+* Abra el archivo ubicado en ```cypress/e2e/environments/environment.js``` y cambie el puerto si es necesario de acuerdo a su instalación de Ghost 5.73.2
+* En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador Ghost 5.73.2
+* Para correr las pruebas y generar los screenshots de Ghost 5.73.2 ejecute ```npx cypress run```
 
+## Instrucciones para ver el reporte VRT:
+* Ubíquese en el directorio cypress-tests-w6 y desde allí abra el archivo results/<datetime>reporte.html
+
+## Instrucciones para generar un nuevo reporte VRT:
+* Ubíquese en el directorio cypress-tests-w6
+* Con la versión de node v18.18.1 ejecute ```npm install```
+* El script que genera el reporte está en esta misma carpeta cypress-tests-w6 y se llama index.js
+* para generar un nuevo reporte ejecute el comando ```node .```
+* Tenga en cuenta que se generarrá un reporte con todos los escenarios incluidos en los tests. Si desea generar un reporte con escenarios específicos, debe remover los specs que no desea incluir.
+
+## Semana 5
 ## Instrucciones para correr pruebas en Cypress:
 * Instale la versión mas reciente de Ghost en su entorno local. ver https://ghost.org/docs/install/local/
 * En su navegador vaya a http://localhost:2368/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto si es necesario de acuerdo a su instalación)
