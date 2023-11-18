@@ -37,10 +37,10 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Pros-y-C
 * En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador Ghost 5.73.2
 * Para correr las pruebas y generar los screenshots de Ghost 5.73.2 ejecute ```npx cypress run```
 
-## Instrucciones para ver el reporte VRT:
+## Instrucciones para ver el reporte VRT de ResembleJS e imágenes generadas con cypress:
 * Ubíquese en el directorio cypress-tests-w6 y desde allí abra el archivo results/<datetime>reporte.html
 
-## Instrucciones para generar un nuevo reporte VRT:
+## Instrucciones para generar un nuevo reporte VRT con ResembleJS e imágenes generadas con cypress:
 * Ubíquese en el directorio cypress-tests-w6
 * Con la versión de node v18.18.1 ejecute ```npm install```
 * El script que genera el reporte está en esta misma carpeta cypress-tests-w6 y se llama index.js
