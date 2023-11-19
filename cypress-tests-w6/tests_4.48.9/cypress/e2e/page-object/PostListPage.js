@@ -7,9 +7,19 @@ class PostListPage {
     visit() {
         cy.visit(environment.baseUrl + 'posts');
         cy.wait(3000)
-        cy.get('.gh-main').scrollTo('bottom')
+        //cy.get('.gh-main').scrollTo('bottom', { ensureScrollable: false });
         
     }
+
+    //Verificar si el post existe con el estado esperado
+    verifyPostStatus(postTitle, status) {
+        cy.get('.gh-content-entry-title').contains(postTitle)
+        .parent()
+        .parent()
+        .find('.gh-post-list-status').contains(status);
+    }
+
+    
 
 }
 export default PostListPage;

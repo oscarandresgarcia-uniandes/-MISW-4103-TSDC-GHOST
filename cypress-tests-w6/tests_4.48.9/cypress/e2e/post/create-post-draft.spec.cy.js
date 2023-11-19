@@ -20,7 +20,7 @@ describe('Creación de un Post en estado Draft', () => {
 
         //Se accede a página de creación de Posts
         postPage.visit();
-        cy.wait(3000)
+        
         //Se crea un nuevo post y se regresa a la página anterior sin publicar
         postPage.createPost(postTitle,postTextContent)
         postPage.submitPost('Draft')
@@ -28,8 +28,6 @@ describe('Creación de un Post en estado Draft', () => {
 
         //Se verifica que el post haya sido creado en estado Draft
         postListPage.visit()
-        cy.wait(3000)
-        const stats = postPage.getPostStatusByTitle(postTitle)
-        assert(stats,'Draft')
+        postListPage.verifyPostStatus(postTitle,'Scheduled')
     })
   })

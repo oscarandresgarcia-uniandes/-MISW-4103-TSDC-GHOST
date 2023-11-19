@@ -1,5 +1,5 @@
 import {environment} from '../environments/environment';
-
+import { closeWarningOldVersion } from '../utilities';
 //Clase para facilitar navegación de página de creación de Posts
 class PostNewPage {
 
@@ -7,14 +7,15 @@ class PostNewPage {
     visit() {
         cy.visit(environment.baseUrl + 'editor/post');
         cy.wait(3000)
-        cy.window().scrollTo('bottom', { ensureScrollable: false });
+        closeWarningOldVersion();
+       
     }
 
     //Ir a página de edicion de posts
-    visitEdit(idPost) {
-        cy.visit(environment.baseUrl + 'editor/post/'+idPost);
-        cy.wait(3000)
-        cy.window().scrollTo('bottom', { ensureScrollable: false });
+    visitEdit(postTitle) {
+        cy.get('.posts-list')
+        .contains(postTitle).parent().click();
+        cy.wait(2000)
     }
 
     //Editar Título del Post
@@ -43,12 +44,8 @@ class PostNewPage {
 
     }
 
-    //Obtener estado de un post en la lista con base en el título del post
-    getPostStatusByTitle(postTitle){
 
-        return cy.contains('.gh-post-list-title', postTitle).parent().get('.gh-post-list-status').invoke('val')
 
-    }
 
     submitPost(status){
         switch (status) {
@@ -95,21 +92,23 @@ class PostNewPage {
                     cy.wait(2000)
                     break;
             case 'Delete':
+
                     cy.get('.gh-main')
                     .find('button[title="Settings"]')
                     .click();
                     cy.wait(2000)
-                    cy.window().scrollTo('bottom', { ensureScrollable: false });
-                    cy.get('.settings-menu-delete-button')
-                        .find('button')
-                        .click()
-                    cy.wait(2000)
-                    cy.get('.modal-footer')
-                    .find('.gh-btn-red')
-                    .click();
-                    
-                    
 
+                    cy.window().scrollTo('bottom', { ensureScrollable: false });
+
+                    cy.get('.gh-btn')
+                    .contains('Delete post').parent().click();
+
+
+
+                    cy.get('.modal-footer')
+                    .contains('Delete').click({force: true});
+                    cy.wait(2000)
+                    
                     break;
             default:
                 cy.get('[data-test-link="posts"]').click();
