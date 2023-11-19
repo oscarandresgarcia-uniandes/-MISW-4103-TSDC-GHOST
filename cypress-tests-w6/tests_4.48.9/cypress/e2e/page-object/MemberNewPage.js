@@ -15,9 +15,15 @@ class MemberNewPage {
     }
 
     //Ir a página de edicion de miembros
-    visitEdit(idMember) {
-        cy.visit(environment.baseUrl + 'members/'+idMember);
-        cy.wait(3000)
+    visitEdit(nameMember) {
+        
+        
+        
+        cy.get('.gh-members-list-name').contains(nameMember)
+        .parent()
+        .parent()
+        .click({force:true})
+        cy.wait(2000)
         
     }
 
@@ -70,11 +76,14 @@ class MemberNewPage {
 
     //Borrar Miembro
     deleteMember(){
-        cy.get('button[data-test-button="member-actions"]').click();
+        cy.get('.gh-btn-action-icon').click();
         cy.wait(1000);
-        cy.get('button[data-test-button="delete-member"]').click();
+        cy.get('.gh-member-actions-menu')
+                .contains('Delete member').parent().click();
         cy.wait(1000);
-        cy.get('button[data-test-button="confirm"]').click();
+        cy.get('.modal-footer')
+                    .contains('Delete').click({force: true});
+                    cy.wait(2000)
         cy.wait(1000);
         
     }

@@ -25,31 +25,21 @@ describe('Borrado de un Miembro en la aplicación', () => {
         //Se accede a página de creación de Miembros
         memberPage.visit();
         cy.wait(3000)
+
         //Se crea un nuevo miembro
         memberPage.createMember(memName,memEmail,memLabel,memNote)
         memberPage.saveMember()
         cy.wait(3000)
+
         //Se verifica que el miembro haya sido creado con el nombre y el email
         memberListPage.visit();
-        cy.wait(2000)
-        
-        //Se navega a la página de edición del post
+        memberListPage.checkMemberExists(memName,memEmail);
 
-        cy.contains('.gh-members-list-name', memName)
-        .parents('tr[data-test-list="members-list-item"]')
-        .invoke('attr', 'data-test-member')
-        .as('idMember')
-        
+        //Se elimina el miembro
+        memberPage.visitEdit(memName)
+        memberPage.deleteMember()
+        memberListPage.checkMemberDoesntExist(memName,memEmail);
 
-        cy.get('@idMember').then((idMember) => {
-            
-            memberPage.visitEdit(idMember)
-            cy.wait(3000)
-            memberPage.deleteMember()
-            //Se verifica que el miembro no aparezca en la lista
-            memberListPage.visit();
-            cy.wait(2000)
-            cy.get('[data-test-member="'+idMember+'"]').should('not.exist') 
-        })
+
     })
   })
