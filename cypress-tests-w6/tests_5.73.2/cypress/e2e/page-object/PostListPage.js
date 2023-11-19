@@ -19,6 +19,15 @@ class PostListPage {
 
     }
 
+    //Ver si un post existe con base en el título
+    checkPostDoesntExist(postTitle){
+        cy.contains('.gh-content-entry-title', postTitle).should('not.exist')  
+    }
+
+    checkPostExists(postTitle){
+        cy.contains('.gh-content-entry-title', postTitle)
+    }
+
     
 
 }

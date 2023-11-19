@@ -12,10 +12,22 @@ class PostNewPage {
     }
 
     //Ir a página de edicion de posts
-    visitEdit(idPost) {
-        cy.visit(environment.baseUrl + 'editor/post/'+idPost);
-        cy.wait(3000)
-        cy.window().scrollTo('bottom', { ensureScrollable: false });
+    visitEdit(postTitle) {
+
+        cy.contains('.gh-content-entry-title', postTitle)
+        .parents('.gh-list-row')
+        .invoke('attr', 'data-test-post-id')
+        .as('idPostElement')
+        
+        cy.get('@idPostElement').then((idPostElement) => {
+            cy.get('[data-test-post-id="'+idPostElement+'"]')
+            .contains('.gh-content-entry-status', 'Published')
+            cy.visit(environment.baseUrl + 'editor/post/'+idPostElement);
+            cy.wait(3000)
+            cy.window().scrollTo('bottom', { ensureScrollable: false });
+            cy.wait(3000)
+        })
+
     }
 
     //Editar Título del Post

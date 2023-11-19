@@ -28,33 +28,20 @@ describe('Edición de un Post en estado Published', () => {
         postPage.submitPost('Publish')
         cy.wait(3000)
         //Se verifica que el post haya sido creado en estado Published
-        postListPage.visit();
-        cy.wait(3000)
-        cy.contains('.gh-content-entry-title', postTitle)
-        .parents('.gh-list-row')
-        .invoke('attr', 'data-test-post-id')
-        .as('idPostElement')
-        
-        cy.get('@idPostElement').then((idPostElement) => {
-            cy.get('[data-test-post-id="'+idPostElement+'"]')
-            .contains('.gh-content-entry-status', 'Published')
-            postPage.visitEdit(idPostElement)
-            cy.wait(3000)
-        })
+        postListPage.visit()
+        postListPage.verifyPostStatus(postTitle,'Published')
+
         //Se cambia el título del post
         const postTitle2 = faker.lorem.words(5);
+        postPage.visitEdit(postTitle);
+
         postPage.editTitle(postTitle2)
         cy.wait(1000)
-        postPage.submitPost('Update')
-        cy.wait(3000)
-        postListPage.visit();
-        cy.wait(3000)
-        cy.contains('.gh-content-entry-title', postTitle2)
-
-
-
-
         
+        postPage.submitPost('Update')
+        cy.wait(1000)
+        postListPage.visit();
+        postListPage.checkPostExists(postTitle2)
         
     })
   })
