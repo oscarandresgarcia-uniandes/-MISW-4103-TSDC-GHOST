@@ -1,8 +1,10 @@
 import {environment} from '../environments/environment';
+import { closeWarningOldVersion } from '../utilities';
 
 class TagEditPage {
     visit(slug) {
         cy.visit(environment.baseUrl + 'tags/' + slug);
+        closeWarningOldVersion();
         cy.ghostscreenshot('visit tag edit page');
     }
 

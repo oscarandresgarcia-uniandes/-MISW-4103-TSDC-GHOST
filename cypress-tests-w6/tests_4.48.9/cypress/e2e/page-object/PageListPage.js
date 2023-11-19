@@ -1,8 +1,9 @@
 import {environment} from '../environments/environment';
-
+import {closeWarningOldVersion } from '../utilities';
 class PageListPage {
     visit() {
       cy.visit(environment.baseUrl + 'pages');
+      closeWarningOldVersion();
       cy.ghostscreenshot('visit page list');
     }
 

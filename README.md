@@ -8,6 +8,13 @@
 * Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
 
 ## Semana 6
+
+## Listado de issues encontrados con las regresiones visuales y comparación VRT
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues?q=is%3Aopen+is%3Aissue+label%3AW6
+
+## Listado de pros y cons de las herramientas ResembleJS y BackstopJS
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Pros-y-Cons-de-ResembleJS-y-BackstopJS
+
 ## Instrucciones para correr las pruebas de regresión visual en Cypress:
 * Instale la versión de Ghost 5.73.2 en su entorno local:
 * ```npm install ghost-cli@latest -g```
@@ -30,15 +37,16 @@
 * En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador Ghost 5.73.2
 * Para correr las pruebas y generar los screenshots de Ghost 5.73.2 ejecute ```npx cypress run```
 
-## Instrucciones para ver el reporte VRT:
+## Instrucciones para ver el reporte VRT de ResembleJS e imágenes generadas con cypress:
 * Ubíquese en el directorio cypress-tests-w6 y desde allí abra el archivo results/<datetime>reporte.html
 
-## Instrucciones para generar un nuevo reporte VRT:
+## Instrucciones para generar un nuevo reporte VRT con ResembleJS e imágenes generadas con cypress:
 * Ubíquese en el directorio cypress-tests-w6
 * Con la versión de node v18.18.1 ejecute ```npm install```
 * El script que genera el reporte está en esta misma carpeta cypress-tests-w6 y se llama index.js
 * para generar un nuevo reporte ejecute el comando ```node .```
 * Tenga en cuenta que se generarrá un reporte con todos los escenarios incluidos en los tests. Si desea generar un reporte con escenarios específicos, debe remover los specs que no desea incluir.
+* Puede configurar las opciones de resemble modificando los valores del archivo config.json
 
 ## Semana 5
 ## Instrucciones para correr pruebas en Cypress:

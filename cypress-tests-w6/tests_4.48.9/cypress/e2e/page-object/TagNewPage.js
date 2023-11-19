@@ -1,8 +1,9 @@
 import {environment} from '../environments/environment';
-
+import { closeWarningOldVersion } from '../utilities';
 class TagNewPage {
     visit() {
       cy.visit(environment.baseUrl + 'tags/new');
+      closeWarningOldVersion();
       cy.ghostscreenshot('visit new tag page');
     }
 

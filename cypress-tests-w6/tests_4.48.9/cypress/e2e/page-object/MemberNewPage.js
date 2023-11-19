@@ -6,7 +6,8 @@ class MemberNewPage {
     //Ir a página de creación de miembros
     visit() {
         cy.visit(environment.baseUrl + 'members/new');
-        cy.wait(3000)
+        cy.wait(3000);
+        closeWarningOldVersion();
         cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
