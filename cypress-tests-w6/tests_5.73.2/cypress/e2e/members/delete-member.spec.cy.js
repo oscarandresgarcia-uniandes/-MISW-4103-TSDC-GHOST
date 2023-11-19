@@ -48,8 +48,7 @@ describe('Borrado de un Miembro en la aplicación', () => {
             memberPage.deleteMember()
             //Se verifica que el miembro no aparezca en la lista
             memberListPage.visit();
-            cy.wait(2000)
-            cy.get('[data-test-member="'+idMember+'"]').should('not.exist') 
+            memberListPage.checkMemberDoesntExist(memName,memEmail);
         })
     })
   })
