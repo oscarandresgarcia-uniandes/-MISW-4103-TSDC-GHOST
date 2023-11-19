@@ -8,6 +8,7 @@ class PostNewPage {
         cy.visit(environment.baseUrl + 'editor/post');
         cy.wait(3000)
         closeWarningOldVersion();
+        cy.ghostscreenshot('visit post new page');
        
     }
 

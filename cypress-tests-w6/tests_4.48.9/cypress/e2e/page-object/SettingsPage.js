@@ -8,6 +8,7 @@ class SettingsPage {
         cy.visit(environment.baseUrl + 'settings');
         cy.wait(3000)
         cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.ghostscreenshot('visit settings page');
     }
     /* MÉTODOS PARA DESIGN & BRANDING*/
     //Ir a página de diseño del sitio

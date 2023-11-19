@@ -8,6 +8,7 @@ class MemberListPage {
         cy.visit(environment.baseUrl + 'members');
         cy.wait(3000)
         cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.ghostscreenshot('visit member list page')
     }
 
     //Ver si un miembro existe con base en su nombre y correo

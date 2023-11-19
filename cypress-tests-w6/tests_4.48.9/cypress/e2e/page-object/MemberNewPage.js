@@ -10,7 +10,7 @@ class MemberNewPage {
         cy.visit(environment.baseUrl + 'members/new');
         cy.wait(3000);
         closeWarningOldVersion();
-        cy.wait(1000);
+        cy.ghostscreenshot('visit member new page');
         
     }
 
@@ -32,7 +32,9 @@ class MemberNewPage {
         cy.get('input[id="member-email"]').clear().type(email,{force: true}) 
     }
     editLabels(labels){
-        cy.get('.ember-power-select-trigger-multiple-input').clear().type(labels,{force: true}) 
+        cy.get('input[aria-label="remove element"]').click()
+        cy.get('.ember-power-select-trigger-multiple-input')
+        .type(labels+'{enter}',{force: true}) 
     }
     editNote(note){
         cy.get('textarea[name="note"]').clear().type(note,{force: true}) 
