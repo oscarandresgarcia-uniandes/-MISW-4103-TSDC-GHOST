@@ -26,19 +26,11 @@ describe('Creación de un Post en estado Scheduled', () => {
         //Se crea un nuevo post y se regresa a la página anterior sin publicar
         postPage.createPost(postTitle,postTextContent)
         postPage.submitPost('Scheduled')
-        cy.wait(3000)
-        //Se verifica que el post haya sido creado en estado Published
-        postListPage.visit();
-        cy.wait(3000)
-        cy.contains('.gh-content-entry-title', postTitle)
-        .parents('.gh-list-row')
-        .invoke('attr', 'data-test-post-id')
-        .as('idPostElement')
-        
-        cy.get('@idPostElement').then((idPostElement) => {
-            cy.get('[data-test-post-id="'+idPostElement+'"]')
-            .contains('.gh-content-entry-status', 'Scheduled')
-        })
+        cy.wait(1000)
+
+        //Se verifica que el post haya sido creado en estado Scheduled
+        postListPage.visit()
+        postListPage.verifyPostStatus(postTitle,'Scheduled')
 
         
         
