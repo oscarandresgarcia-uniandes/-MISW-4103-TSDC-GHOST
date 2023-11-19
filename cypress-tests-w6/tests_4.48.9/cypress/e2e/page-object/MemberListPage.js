@@ -10,5 +10,16 @@ class MemberListPage {
         cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
+    //Ver si un miembro existe con base en su nombre y correo
+    checkMemberDoesntExist(memName,memEmail){
+        cy.contains('.gh-members-list-name', memName).should('not.exist') 
+        cy.contains('.gh-members-list-email', memEmail).should('not.exist') 
+    }
+
+    checkMemberExists(memName,memEmail){
+        cy.contains('.gh-members-list-name', memName) 
+        cy.contains('.gh-members-list-email', memEmail) 
+    }
+
 }
 export default MemberListPage;
