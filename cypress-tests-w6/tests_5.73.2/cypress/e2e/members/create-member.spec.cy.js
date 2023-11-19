@@ -32,9 +32,7 @@ describe('Creación de un Miembro en la aplicación', () => {
         cy.wait(3000)
         //Se verifica que el miembro haya sido creado con el nombre y el email
         memberListPage.visit();
-        cy.wait(2000)
-        cy.contains('.gh-members-list-name', memName)
-        cy.contains('.gh-members-list-email', memEmail)
+        memberListPage.checkMemberExists(memName,memEmail);
         
     })
   })
