@@ -88,8 +88,15 @@ class PostNewPage {
 
                 break;
             case 'Update':
-                    cy.get('[data-test-button="publish-save"]').click()
+                    cy.get('.gh-publishmenu')
+                    .contains('Update').parent().click();
                     cy.wait(2000)
+
+                    cy.get('.gh-publishmenu-footer')
+                    .contains('button', 'Update')
+                .click()
+                    cy.wait(2000)
+                    
                     break;
             case 'Delete':
 

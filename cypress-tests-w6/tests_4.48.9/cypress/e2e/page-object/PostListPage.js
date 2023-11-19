@@ -24,5 +24,9 @@ class PostListPage {
         cy.contains('.gh-post-list-title', postTitle).should('not.exist')  
     }
 
+    checkPostExists(postTitle){
+        cy.contains('.gh-post-list-title', postTitle)
+    }
+
 }
 export default PostListPage;
