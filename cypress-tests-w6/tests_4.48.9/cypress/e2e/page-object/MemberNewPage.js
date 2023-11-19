@@ -32,12 +32,17 @@ class MemberNewPage {
         cy.get('input[id="member-email"]').clear().type(email,{force: true}) 
     }
     editLabels(labels){
-        cy.get('input[aria-label="remove element"]').click()
-        cy.get('.ember-power-select-trigger-multiple-input')
-        .type(labels+'{enter}',{force: true}) 
+        cy.get('.gh-member-label-input').then(($ele) => {
+            if ($ele.find('[aria-label="remove element"]').length > 0) {
+                cy.get('[aria-label="remove element"]').click()
+            } 
+            cy.get('.ember-power-select-trigger-multiple-input')
+            .type(labels+'{enter}',{force: true}) 
+        })
+        
     }
     editNote(note){
-        cy.get('textarea[name="note"]').clear().type(note,{force: true}) 
+        cy.get('textarea[name="note"]').clear({force: true}).type(note,{force: true}) 
     }
 
     //Llenar formato Miembro
@@ -58,8 +63,8 @@ class MemberNewPage {
         return cy.get('input[id="member-email"]').invoke('val')
     }
 
-    getLabels(){
-        return cy.get('.ember-power-select-trigger-multiple-input').invoke('val')
+    containsLabels(label){
+        return cy.get('[title="Label"]').contains(label)
     }
 
     getNote(){

@@ -57,17 +57,16 @@ describe('Edición de un Miembro en la aplicación', () => {
         })
 
         memberPage.getEmail().then((em) => {
-            assert(memEmail2,em)
+            expect(memEmail2).eql(em)
         })
 
-        memberPage.getLabels().then((lab) => {
-            assert(memLabel2,lab)
-        })
+        memberPage.containsLabels(memLabel2)
 
         memberPage.getNote().then((note) => {
-            assert(memNote2,note)
+            expect(memNote2).eql(note)
         })
 
+        
         
     })
   })
