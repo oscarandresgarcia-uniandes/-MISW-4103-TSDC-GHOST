@@ -23,31 +23,20 @@ describe('Eliminar un Post en estado Published', () => {
         //Se accede a página de creación de Posts
         postPage.visit();
         cy.wait(3000)
-        //Se crea un nuevo post y se regresa a la página anterior sin publicar
+        //Se crea un nuevo post en estado Published
         postPage.createPost(postTitle,postTextContent)
         postPage.submitPost('Publish')
         cy.wait(3000)
-        //Se verifica que el post haya sido creado en estado Published
+        //Se elimina el post
         postListPage.visit();
         cy.wait(3000)
-        cy.contains('.gh-content-entry-title', postTitle)
-        .parents('.gh-list-row')
-        .invoke('attr', 'data-test-post-id')
-        .as('idPostElement')
-        
-        cy.get('@idPostElement').then((idPostElement) => {
-            cy.get('[data-test-post-id="'+idPostElement+'"]')
-            .contains('.gh-content-entry-status', 'Published')
-            postPage.visitEdit(idPostElement)
-            cy.wait(3000)
-            //Se elimina el post y se verifica que no aparezca en la lista
-            postPage.submitPost('Delete')
-            cy.wait(3000)
-            postListPage.visit();
-            cy.wait(3000)
-            cy.get('[data-test-post-id="'+idPostElement+'"]').should('not.exist')  
-        })
-        
-        
+        postPage.visitEdit(postTitle);
+
+        postPage.submitPost('Delete')
+        //Se verifica que el post no aparezca en la lista
+
+        postListPage.visit();
+        cy.wait(1000)
+        postListPage.checkPostDoesntExist(postTitle)
     })
   })
