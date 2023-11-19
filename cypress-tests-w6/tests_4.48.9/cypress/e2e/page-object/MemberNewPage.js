@@ -16,10 +16,7 @@ class MemberNewPage {
 
     //Ir a página de edicion de miembros
     visitEdit(nameMember) {
-        
-        
-        
-        cy.get('.gh-members-list-name').contains(nameMember)
+        cy.get('.gh-members-list-name').contains(nameMember,{force:true})
         .parent()
         .parent()
         .click({force:true})
