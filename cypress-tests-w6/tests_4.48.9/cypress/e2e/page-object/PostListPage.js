@@ -7,7 +7,7 @@ class PostListPage {
     visit() {
         cy.visit(environment.baseUrl + 'posts');
         cy.wait(3000)
-        //cy.get('.gh-main').scrollTo('bottom', { ensureScrollable: false });
+        cy.get('.gh-main').scrollTo('bottom', { ensureScrollable: false });
         
     }
 
@@ -19,7 +19,10 @@ class PostListPage {
         .find('.gh-post-list-status').contains(status);
     }
 
-    
+    //Ver si un post existe con base en el título
+    checkPostDoesntExist(postTitle){
+        cy.contains('.gh-post-list-title', postTitle).should('not.exist')  
+    }
 
 }
 export default PostListPage;
