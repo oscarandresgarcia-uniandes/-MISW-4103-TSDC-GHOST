@@ -11,5 +11,15 @@ class PostListPage {
         cy.ghostscreenshot('visit post list page');
     }
 
+    //Verificar si el post existe con el estado esperado
+    verifyPostStatus(postTitle, status) {
+        cy.get('.gh-post-list-title').contains(postTitle)
+        .parent()
+        .find('.gh-content-entry-status').contains(status);
+
+    }
+
+    
+
 }
 export default PostListPage;
