@@ -8,6 +8,7 @@ class PostListPage {
         cy.visit(environment.baseUrl + 'posts');
         cy.wait(3000)
         cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.ghostscreenshot('visit post list page');
     }
 
 }

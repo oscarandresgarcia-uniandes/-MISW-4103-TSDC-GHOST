@@ -8,6 +8,7 @@ class PostNewPage {
         cy.visit(environment.baseUrl + 'editor/post');
         cy.wait(3000)
         cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.ghostscreenshot('visit post new page');
     }
 
     //Ir a página de edicion de posts

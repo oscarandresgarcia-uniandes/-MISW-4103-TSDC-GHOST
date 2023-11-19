@@ -8,6 +8,7 @@ class MemberNewPage {
         cy.visit(environment.baseUrl + 'members/new');
         cy.wait(3000)
         cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.ghostscreenshot('visit member new page');
     }
 
     //Ir a página de edicion de miembros
