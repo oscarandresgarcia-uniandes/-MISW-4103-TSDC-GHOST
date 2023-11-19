@@ -35,20 +35,11 @@ describe('Borrado de un Miembro en la aplicación', () => {
         
         //Se navega a la página de edición del post
 
-        cy.contains('.gh-members-list-name', memName)
-        .parents('tr[data-test-list="members-list-item"]')
-        .invoke('attr', 'data-test-member')
-        .as('idMember')
-        
+        memberPage.visitEdit(memName)
 
-        cy.get('@idMember').then((idMember) => {
-            
-            memberPage.visitEdit(idMember)
-            cy.wait(3000)
-            memberPage.deleteMember()
-            //Se verifica que el miembro no aparezca en la lista
-            memberListPage.visit();
-            memberListPage.checkMemberDoesntExist(memName,memEmail);
-        })
+        //Se verifica que el miembro no aparezca en la lista
+        memberPage.deleteMember()
+        memberListPage.visit();
+        memberListPage.checkMemberDoesntExist(memName,memEmail);
     })
   })

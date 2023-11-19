@@ -12,10 +12,23 @@ class MemberNewPage {
     }
 
     //Ir a página de edicion de miembros
-    visitEdit(idMember) {
-        cy.visit(environment.baseUrl + 'members/'+idMember);
-        cy.wait(3000)
-        cy.window().scrollTo('bottom', { ensureScrollable: false });
+    visitEdit(memName) {
+
+        cy.contains('.gh-members-list-name', memName)
+        .parents('tr[data-test-list="members-list-item"]')
+        .invoke('attr', 'data-test-member')
+        .as('idMember')
+        
+
+        cy.get('@idMember').then((idMember) => {
+            
+            cy.visit(environment.baseUrl + 'members/'+idMember);
+            cy.wait(3000)
+            cy.window().scrollTo('bottom', { ensureScrollable: false });
+            
+        })
+
+        
     }
 
     //Editar campos de Miembro
