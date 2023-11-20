@@ -1,0 +1,42 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/0845345196_1_0__0_.png",
+        "test": "../bitmaps_test/20231119-112751/0845345196_1_0__0_.png",
+        "selector": "",
+        "fileName": "0845345196_1_0__0_.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/1.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "engineErrorMsg": "net::ERR_FILE_NOT_FOUND at file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/1.png",
+        "error": "Reference file not found /Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/bitmaps_reference/0845345196_1_0__0_.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/0845345196_1_0__1_.png",
+        "test": "../bitmaps_test/20231119-112751/0845345196_1_0__1_.png",
+        "selector": "",
+        "fileName": "0845345196_1_0__1_.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/1.png",
+        "referenceUrl": "",
+        "expect": 0,
+        "viewportLabel": "",
+        "engineErrorMsg": "net::ERR_FILE_NOT_FOUND at file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/1.png",
+        "error": "Reference file not found /Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/bitmaps_reference/0845345196_1_0__1_.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": ""
+}

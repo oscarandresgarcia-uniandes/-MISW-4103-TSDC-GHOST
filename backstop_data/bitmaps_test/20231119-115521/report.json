@@ -1,0 +1,42 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0__0__.png",
+        "test": "../bitmaps_test/20231119-115521/_1_0__0__.png",
+        "selector": "",
+        "fileName": "_1_0__0__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/1.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/bitmaps_reference/_1_0_document_0__.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "engineErrorMsg": "Protocol error (Network.setCookies): Invalid cookie fields",
+        "error": "Reference file not found /Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/bitmaps_reference/_1_0__0__.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0__1__.png",
+        "test": "../bitmaps_test/20231119-115521/_1_0__1__.png",
+        "selector": "",
+        "fileName": "_1_0__1__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/1.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/bitmaps_reference/_1_0_document_0__.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "engineErrorMsg": "Protocol error (Network.setCookies): Invalid cookie fields",
+        "error": "Reference file not found /Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/bitmaps_reference/_1_0__1__.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": " "
+}

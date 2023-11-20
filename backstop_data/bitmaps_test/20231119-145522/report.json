@@ -1,0 +1,33 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_0__.png",
+        "test": "../bitmaps_test/20231119-145522/_1_0_document_0__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_0__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/1.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/1.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": false,
+          "dimensionDifference": {
+            "width": -1216,
+            "height": -780
+          },
+          "rawMisMatchPercentage": 24.314742758322524,
+          "misMatchPercentage": "24.31",
+          "analysisTime": 129
+        },
+        "diffImage": "../bitmaps_test/20231119-145522/failed_diff__1_0_document_0__.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": " "
+}
