@@ -48,7 +48,7 @@ async function renderGhostReport(imagesA, imagesB, folderPathA, folderPathB) {
         options
     );
 
-    compareInfo = {
+    const compareInfo = {
       isSameDimensions: data.isSameDimensions,
       dimensionDifference: data.dimensionDifference,
       rawMisMatchPercentage: data.rawMisMatchPercentage,
