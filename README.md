@@ -58,7 +58,7 @@ https://www.youtube.com/watch?v=B0UYhpK1QTY
 * Instale la versión mas reciente de Ghost en su entorno local. ver https://ghost.org/docs/install/local/
 * En su navegador vaya a http://localhost:2368/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto si es necesario de acuerdo a su instalación)
 * instale la kraken https://misovirtual.virtual.uniandes.edu.co/codelabs/kraken-testing-tool/index.html?index=..%2F..index#0
-* En un computador con el sistema operativo MacOs Senoma 14.2
+* En un computador con el sistema operativo windows 10.
 * Instale una versión de node (se recomienda v16.14.2)
 * Clone este repositorio
 * Ubíquese en el directorio donde se encuentra la carpeta kraken de este repositorio
