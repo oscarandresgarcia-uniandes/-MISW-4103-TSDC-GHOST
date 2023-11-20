@@ -37,16 +37,39 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Pros-y-C
 * En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador Ghost 5.73.2
 * Para correr las pruebas y generar los screenshots de Ghost 5.73.2 ejecute ```npx cypress run```
 
-## Instrucciones para ver el reporte VRT de ResembleJS e imágenes generadas con cypress:
-* Ubíquese en el directorio cypress-tests-w6 y desde allí abra el archivo results/\<datetime\>/reporte.html
+* ## Instrucciones para correr las pruebas de regresión visual en Backstop:
+* Instale la versión de Ghost 5.73.2 en su entorno local:
+* ```npm install ghost-cli@latest -g```
+* ```ghost install 5.73.2 local```
+* Instale la versión de Ghost 4.48.9 en su entorno local:
+* ```npm install ghost-cli@latest -g```
+* ```ghost install 4.48.9 local```
+* instale backstop con el comando:
+* ```npm install -g backstopjs```
+* Eirigase al directorio MISW-4103-TSDC-GHOST/backstop_data
+* Ejecute los test con el comando
+* ```backstop test```
+* despues se abrira automaticamente una ventana de navegador con los screenshots de las dos versiones y la diferencia
 
-## Instrucciones para generar un nuevo reporte VRT con ResembleJS e imágenes generadas con cypress:
-* Ubíquese en el directorio cypress-tests-w6
-* Con la versión de node v18.18.1 ejecute ```npm install```
-* El script que genera el reporte está en esta misma carpeta cypress-tests-w6 y se llama index.js
-* para generar un nuevo reporte ejecute el comando ```node .```
-* Tenga en cuenta que se generarrá un reporte con todos los escenarios incluidos en los tests. Si desea generar un reporte con escenarios específicos, debe remover los specs que no desea incluir.
-* Puede configurar las opciones de resemble modificando los valores del archivo config.json
+## Instrucciones para correr pruebas en Kraken-w6:
+* Instale la versión mas reciente de Ghost en su entorno local. ver https://ghost.org/docs/install/local/
+* En su navegador vaya a http://localhost:2368/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto si es necesario de acuerdo a su instalación)
+* instale la kraken https://misovirtual.virtual.uniandes.edu.co/codelabs/kraken-testing-tool/index.html?index=..%2F..index#0
+* En un computador con el sistema operativo MacOs Senoma 14.2
+* Instale una versión de node (se recomienda v16.14.2)
+* Clone este repositorio
+* Ubíquese en el directorio donde se encuentra la carpeta kraken de este repositorio
+* Modifique el archivo ```properties.json```
+* en el formato de este archivo coloque sus credenciales de ingreso a ghost
+* Ingrese a la ruta donde ```kraken-w6/features/pruebas``` aca encontrara las dos versiones de ghost en sus respectivas carpetas
+* Copie el archivo de pruebas que quiere ejecutar y peguelo en la ruta ```/features```
+* Ingrese a la ruta donde ```kraken-w6/features/web/step_definitios``` aca encontrara los steps de las dos versiones de ghost en sus respectivas carpetas
+* Copie el archivo step.js que quiere ejecutar y peguelo en la ruta ```/features/web/step_definition```
+* Recuerde que no puede correr los features con un steps distinto al de la version que quiere probar
+* Recuerde que las pruebas deben ejecutarse en orden : Ejemplo (Prueba_1,Prueba_2...Prueba_n..Prueba_n+1)
+* Ejecute el comando ```npx kraken-node run```
+* Se ejecuta la prueba deseada y los screenshots seran generados automaticamente en la carpeta ```/screenshots```
+
 
 ## Semana 5
 ## Instrucciones para correr pruebas en Cypress:
