@@ -16,12 +16,14 @@ class SettingsPage {
         cy.visit(environment.baseUrl + 'settings/design');
         cy.wait(3000)
         cy.window().scrollTo('bottom', { ensureScrollable: false });
+        cy.ghostscreenshot('visit branding page');
     }
 
     //Seleccionar botón para customizar Branding
     clickOnCustomizeDesign() {
-        cy.get('[data-testid="design"]')
-            .contains('button', 'Customize')
+        cy.get('.cursor-pointer')
+        .contains('Customize')
+        .parent()
             .click()
     }
 

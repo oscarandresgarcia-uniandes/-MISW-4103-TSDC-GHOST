@@ -17,6 +17,8 @@ describe('Edición del Branding del Site creado', () => {
         const titleSite = faker.lorem.words(5);
         const colorSite = faker.color.rgb().toUpperCase();
         //Se accede a página de configuración del diseño
+        settingsPage.visit();
+        cy.wait(2000)
         settingsPage.visitDesignPage();
         cy.wait(5000)
         //Se selecciona el botón para editar el Diseño y Branding
