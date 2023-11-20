@@ -38,7 +38,7 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Pros-y-C
 * Para correr las pruebas y generar los screenshots de Ghost 5.73.2 ejecute ```npx cypress run```
 
 ## Instrucciones para ver el reporte VRT de ResembleJS e imágenes generadas con cypress:
-* Ubíquese en el directorio cypress-tests-w6 y desde allí abra el archivo results/<datetime>reporte.html
+* Ubíquese en el directorio cypress-tests-w6 y desde allí abra el archivo results/\<datetime\>/reporte.html
 
 ## Instrucciones para generar un nuevo reporte VRT con ResembleJS e imágenes generadas con cypress:
 * Ubíquese en el directorio cypress-tests-w6
