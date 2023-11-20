@@ -1,0 +1,168 @@
+{
+  "testSuite": "BackstopJS",
+  "tests": [
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_0__.png",
+        "test": "../bitmaps_test/20231119-142152/_1_0_document_0__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_0__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/1.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/1.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 79.09892455685257,
+          "misMatchPercentage": "79.10",
+          "analysisTime": 493
+        },
+        "diffImage": "../bitmaps_test/20231119-142152/failed_diff__1_0_document_0__.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_1__.png",
+        "test": "../bitmaps_test/20231119-142152/_1_0_document_1__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_1__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/1.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/1.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 80.2670233463035,
+          "misMatchPercentage": "80.27",
+          "analysisTime": 478
+        },
+        "diffImage": "../bitmaps_test/20231119-142152/failed_diff__1_0_document_1__.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_0__.png",
+        "test": "../bitmaps_test/20231119-142152/_1_0_document_0__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_0__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/2.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/2.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 79.09892455685257,
+          "misMatchPercentage": "79.10",
+          "analysisTime": 472
+        },
+        "diffImage": "../bitmaps_test/20231119-142152/failed_diff__1_0_document_0__.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_1__.png",
+        "test": "../bitmaps_test/20231119-142152/_1_0_document_1__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_1__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/2.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/2.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 80.2670233463035,
+          "misMatchPercentage": "80.27",
+          "analysisTime": 520
+        },
+        "diffImage": "../bitmaps_test/20231119-142152/failed_diff__1_0_document_1__.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_0__.png",
+        "test": "../bitmaps_test/20231119-142152/_1_0_document_0__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_0__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/3.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/3.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 79.09892455685257,
+          "misMatchPercentage": "79.10",
+          "analysisTime": 492
+        },
+        "diffImage": "../bitmaps_test/20231119-142152/failed_diff__1_0_document_0__.png"
+      },
+      "status": "fail"
+    },
+    {
+      "pair": {
+        "reference": "../bitmaps_reference/_1_0_document_1__.png",
+        "test": "../bitmaps_test/20231119-142152/_1_0_document_1__.png",
+        "selector": "document",
+        "fileName": "_1_0_document_1__.png",
+        "label": "1",
+        "requireSameDimensions": true,
+        "misMatchThreshold": 0.1,
+        "url": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshot_ghost_4.48/screenshots/prueba_1/3.png",
+        "referenceUrl": "file:///Users/bryandsalamanca/Desktop/Miso_uniandes/pruebas_automatizadas/backstop_data/imagenes_test/screenshots_ghost_5.69/screenshots/prueba_1/3.png",
+        "expect": 0,
+        "viewportLabel": " ",
+        "diff": {
+          "isSameDimensions": true,
+          "dimensionDifference": {
+            "width": 0,
+            "height": 0
+          },
+          "rawMisMatchPercentage": 80.2670233463035,
+          "misMatchPercentage": "80.27",
+          "analysisTime": 475
+        },
+        "diffImage": "../bitmaps_test/20231119-142152/failed_diff__1_0_document_1__.png"
+      },
+      "status": "fail"
+    }
+  ],
+  "id": " "
+}
