@@ -15,6 +15,9 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues?q=is%3
 ## Listado de pros y cons de las herramientas ResembleJS y BackstopJS
 https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Pros-y-Cons-de-ResembleJS-y-BackstopJS
 
+## Video explicando la estrategia de regresión visual y VRT
+https://www.youtube.com/watch?v=B0UYhpK1QTY
+
 ## Instrucciones para correr las pruebas de regresión visual en Cypress:
 * Instale la versión de Ghost 5.73.2 en su entorno local:
 * ```npm install ghost-cli@latest -g```
