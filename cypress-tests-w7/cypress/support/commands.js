@@ -1,3 +1,4 @@
+import 'cypress-file-upload';
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -23,3 +24,7 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('ghostscreenshot', (name_string) => {
+    cy.wait(600);
+    cy.screenshot(name_string, {overwrite: true});
+  });
