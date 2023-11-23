@@ -1,0 +1,133 @@
+{
+    "page-post": [
+        {
+            "title": "Coming soon",
+            "slug": "coming-soon",
+            "html": "<p>The <strong>html</strong> content</p><div class=\"kg-card kg-button-card kg-align-center\"><a href=\"#/portal/signup/free\" class=\"kg-btn kg-btn-accent\">And the button</a></div>",
+            "feature_image": "http://localhost:2368/content/images/2023/11/tigre-fake-4.jpg",
+            "plaintext": "The html content And the button",
+            "type": "page",
+            "status": "published",
+            "visibility": "public",
+            "created_at": "2023-11-16 00:10:28",
+            "created_by": 1,
+            "published_at": "2023-11-16 00:15:28",
+            "published_by": 1,
+            "custom_excerpt": "The excerpt text",
+            "show_title_and_feature_image": 1
+        },
+        {
+            "title": "Coming soon 2",
+            "slug": "coming-soon-2",
+            "html": "<p>The <strong>html</strong> content</p><div class=\"kg-card kg-button-card kg-align-center\"><a href=\"#/portal/signup/free\" class=\"kg-btn kg-btn-accent\">And the button</a></div>",
+            "feature_image": "http://localhost:2368/content/images/2023/11/tigre-fake-4.jpg",
+            "plaintext": "The html content And the button",
+            "type": "page",
+            "status": "published",
+            "visibility": "public",
+            "created_at": "2023-11-16 00:10:28",
+            "created_by": 1,
+            "published_at": "2023-11-16 00:15:28",
+            "published_by": 1,
+            "custom_excerpt": "The excerpt text",
+            "show_title_and_feature_image": 1
+        }
+    ],
+    "tag": [
+        {
+            "name": "Getting Started",
+            "slug": "getting-started",
+            "description": "Getting started with Ghost",
+            "feature_image": "http://localhost:2368/content/images/2023/11/tigre-fake-4.jpg",
+            "visibility": "public",
+            "meta_title": "Getting Started",
+            "meta_description": "Getting started with Ghost",
+            "created_at": "2023-11-16 00:10:28",
+            "created_by": 1,
+            "updated_at": "2023-11-16 00:10:28",
+            "updated_by": 1,
+            "accent_color": "#000000",
+            "canonical_url": "http://localhost:2368/tag/getting-started/"
+        },
+        {
+            "name": "Getting Started 2",
+            "slug": "getting-started-2",
+            "description": "Getting started with Ghost",
+            "feature_image": "http://localhost:2368/content/images/2023/11/tigre-fake-4.jpg",
+            "visibility": "public",
+            "meta_title": "Getting Started",
+            "meta_description": "Getting started with Ghost",
+            "created_at": "2023-11-16 00:10:28",
+            "created_by": 1,
+            "updated_at": "2023-11-16 00:10:28",
+            "updated_by": 1,
+            "accent_color": "#000000",
+            "canonical_url": "http://localhost:2368/tag/getting-started/"
+        }
+    ],
+    "member": [
+        {
+            "email": "Reinhold.DuBuque0@yahoo.com",
+            "status": "free",
+            "name": "Reinhold DuBuque",
+            "note": "Stillicidium nesciunt certus tergiversatio corrupti ciminatio conicio pecto absconditus combibo. Cerno volaticus tyrannus corrigo adulescens. Utroque deputo quod tribuo quo maiores pauper attonbitus vergo.",
+            "enable_comment_notifications": 1,
+            "email_count": 0,
+            "email_opened_count": 0,
+            "email_open_rate": 0,
+            "email_open_disabled": 0,
+            "created_at": "2023-11-16 00:10:28",
+            "created_by": 1,
+            "updated_at": "2023-11-16 00:10:28",
+            "updated_by": 1
+        },
+        {
+            "email": "Reinhold.DuBuque0@gmail.com",
+            "status": "free",
+            "name": "Reinhold DuBuque",
+            "note": "Nesciunt certus tergiversatio corrupti ciminatio conicio pecto absconditus combibo. Cerno volaticus tyrannus corrigo adulescens. Utroque deputo quod tribuo quo maiores pauper attonbitus vergo.",
+            "enable_comment_notifications": 1,
+            "email_count": 0,
+            "email_opened_count": 0,
+            "email_open_rate": 0,
+            "email_open_disabled": 0,
+            "created_at": "2023-11-16 00:10:28",
+            "created_by": 1,
+            "updated_at": "2023-11-16 00:10:28",
+            "updated_by": 1
+        }
+    ],
+    "custom_theme_settings": [
+        {
+            "theme": "source",
+            "key": "site_background_color",
+            "type": "color",
+            "value": "#000000"
+        },
+        {
+            "theme": "source",
+            "key": "header_and_footer_color",
+            "type": "select",
+            "value": "Background color"
+        },
+        {
+            "theme": "source",
+            "key": "navigation_layout",
+            "type": "select",
+            "value": "Logo in the middle"
+        },
+        {
+            "theme": "source",
+            "key": "background_image",
+            "type": "boolean",
+            "value": false
+        }
+        ,
+        {
+            "theme": "source",
+            "key": "header_text",
+            "type": "text",
+            "value": "Welcome!"
+        }
+    ]
+}
