@@ -16,6 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands';
 import LoginPage from '../e2e/page-object/LoginPage';
+import { environment } from '../e2e/environments/environment';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -28,10 +29,29 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 beforeEach(() => {
 
     const loginPage = new LoginPage();
+    const dataVariable = 'dataPool';
 
-    //Importar el data pool para todos los specs
-    cy.fixture('data-pool.json').as('dataPool');
+    //Revisa si los specs son de la carpeta aprioryfolder o dynamicfolder y hace el request necesario
+    if(Cypress.spec.relative.includes(environment.aprioryfolder)) {
+        //Importar el data pool para todos los specs
+        cy.fixture('data-pool.json').as(dataVariable);
+    } else if(Cypress.spec.relative.includes(environment.dynamicfolder)) {
+        //Importar el data pool dynámico para los specs
+        cy.log('-----------------------------------------------------------------');
+        cy.log('-----------------------------------------------------------------');
+        cy.log('-----------------------------------------------------------------');
+        cy.log('llamando datos dinámicos desde Mockaroo: ' + environment.apiURL);
+        cy.log('-----------------------------------------------------------------');
+        cy.log('-----------------------------------------------------------------');
+        cy.log('-----------------------------------------------------------------');
 
+        cy.request(environment.apiURL)
+		.then((response) => {
+            //cy.log(JSON.stringify(response.body));
+            cy.wrap(response.body).as('dataPool');
+		});
+    }
+    
     loginPage.visit();
     loginPage.login();
 });
