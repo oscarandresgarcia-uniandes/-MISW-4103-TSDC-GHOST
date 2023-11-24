@@ -14,6 +14,14 @@ class PageListPage {
       .find('.gh-content-entry-status').contains(status);
     }
 
+    pageIsFeatured(pageData) {
+      cy.window().scrollTo('bottom', { ensureScrollable: false });
+      cy.wait(500);
+      cy.get('.gh-content-entry-title').contains(pageData.title)
+      .parent()
+      .find('.gh-featured-post');
+    }
+
     pageNotExist(pageData) {
       cy.window().scrollTo('bottom', { ensureScrollable: false });
       cy.wait(500);

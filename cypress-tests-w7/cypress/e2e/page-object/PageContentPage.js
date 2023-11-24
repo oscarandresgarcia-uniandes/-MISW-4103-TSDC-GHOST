@@ -67,6 +67,16 @@ class PageContentPage {
       cy.get('.ember-power-select-option').contains(tagName).click();
       cy.ghostscreenshot('page add tag');
     }
+
+    setFeatured(isFeatured){
+      cy.get('button.settings-menu-toggle').click();
+      cy.ghostscreenshot('page add tag menu');
+
+      if(isFeatured){
+        cy.get('input[data-test-checkbox="featured"] + span.input-toggle-component').click();
+      }      
+      cy.ghostscreenshot('page add featured select');
+    }
 }
 
 export default PageContentPage;
