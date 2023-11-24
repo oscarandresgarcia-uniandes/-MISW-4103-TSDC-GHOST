@@ -43,13 +43,16 @@ class TagNewPage {
       
     }
 
-    invalidTagData(validationList) {
+    invalidTagData(validationList, retry = true) {
       validationList.forEach(element => { 
         cy.contains(element);
       });
 
       //Intentar de nuevo con otra imagen
-      cy.get('button.gh-btn.gh-btn-green').click();
+      if (retry) {
+        cy.get('button.gh-btn.gh-btn-green').click();
+      }
+      
       cy.get('#tag-name').click();
       cy.ghostscreenshot('new tag validation errors');
     }
