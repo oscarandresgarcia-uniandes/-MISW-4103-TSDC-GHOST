@@ -1,6 +1,7 @@
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import TagEditPage from '../../page-object/TagEditPage';
+import { faker } from '@faker-js/faker';
 
 describe('Gestión de Tags - Crear Tag Exitoso', function() {
     const tagListPage = new TagListPage();
@@ -11,10 +12,10 @@ describe('Gestión de Tags - Crear Tag Exitoso', function() {
         tagNewPage.visit();
 
         const tagData = {
-            name: 'Nuevo Tag',
-            color: 'e3f218',
-            slug: 'nuevo-slug',
-            description: 'Nuevo tag de prueba 1',
+            name: faker.lorem.words(2),
+            color: faker.internet.color().slice(1),
+            slug: faker.helpers.slugify(faker.lorem.words(2).toLowerCase()),
+            description: faker.lorem.words(5),
             image: {name: 'tigre-test.jpg', type: 'image/jpeg'}
         };
 

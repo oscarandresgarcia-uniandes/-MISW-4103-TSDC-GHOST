@@ -1,6 +1,7 @@
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import TagEditPage from '../../page-object/TagEditPage';
+import { faker } from '@faker-js/faker';
 
 describe('Gestión de Tags - Crear Tag Con datos inválidos y requeridos', function() {
     const tagListPage = new TagListPage();
@@ -13,9 +14,9 @@ describe('Gestión de Tags - Crear Tag Con datos inválidos y requeridos', funct
 
         let tagData = {
             name: ' ',
-            color: 'invalido',
-            slug: ' ',
-            description: '<script>document.documentElement.innerHTML = "hacked";</script>',
+            color: faker.lorem.words(1),
+            slug: faker.helpers.slugify(faker.lorem.words(2).toLowerCase()),
+            description: `<script>${faker.lorem.paragraphs()}</script>`,
             image: {name: 'example.json', type: 'application/json'}
         };
 
@@ -35,10 +36,10 @@ describe('Gestión de Tags - Crear Tag Con datos inválidos y requeridos', funct
 
 
         // Ajustar datos
-        tagData.name = 'Nuevo Tag';
-        tagData.color = 'e3f218';
-        tagData.slug = 'nuevo-slug';
-        tagData.description = 'Nuevo tag de prueba 2';
+        tagData.name = faker.lorem.words(2);
+        tagData.color = faker.internet.color().slice(1);
+        tagData.slug = faker.helpers.slugify(faker.lorem.words(2).toLowerCase());
+        tagData.description = faker.lorem.words(5);
         tagData.image = {name: 'tigre-test.jpg', type: 'image/jpeg'};
         tagNewPage.clearFields();
         tagNewPage.createTag(tagData);
