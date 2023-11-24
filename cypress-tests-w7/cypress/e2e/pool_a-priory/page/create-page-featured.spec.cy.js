@@ -1,11 +1,11 @@
 import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
 
-describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
+describe('Gestión de Páginas - Crear Página Featured', () => {
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
 
-    it.only('Crear Página Exitoso en draft', function() {
+    it.only('Crear Página Featured', function() {
 
         const dataPool = this.dataPool;
         //cy.log(JSON.stringify(dataPool));

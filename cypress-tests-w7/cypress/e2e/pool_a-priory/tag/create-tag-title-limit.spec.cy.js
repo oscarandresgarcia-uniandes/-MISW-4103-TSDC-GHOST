@@ -1,9 +1,9 @@
 import TagNewPage from '../../page-object/TagNewPage';
 
-describe('Gestión de Tags - Crear Tag Exitoso', function() {
+describe('Gestión de Tags - Crear Tag con limite de frontera en el título', function() {
     const tagNewPage = new TagNewPage();
 
-    it.only('Crear Tag Exitoso', function() {
+    it.only('Crear Tag con limite de frontera en el título', function() {
 
         const dataPool = this.dataPool;
 

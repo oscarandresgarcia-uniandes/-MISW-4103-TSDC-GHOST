@@ -1,11 +1,11 @@
 import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
 
-describe('Gestión de Páginas - Crear Página Con fecha de publicación futura', () => {
+describe('Gestión de Páginas - Crear Página Con fecha de publicación pasada', () => {
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
 
-    it.only('Crear Página Con fecha de publicación futura', function() {
+    it.only('Crear Página Con fecha de publicación pasada', function() {
 
         const dataPool = this.dataPool;
         //cy.log(JSON.stringify(dataPool));
