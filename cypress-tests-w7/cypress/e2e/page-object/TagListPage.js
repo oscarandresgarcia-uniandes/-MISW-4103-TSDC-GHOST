@@ -32,6 +32,11 @@ class TagListPage {
         cy.get('.gh-tags-list-item [data-test-tag-slug] span').should('not.contain', tagData.slug);
         cy.ghostscreenshot('tag doesnt exist');
     }
+
+    selectInternalTagFilter() {
+        cy.get('[data-test-tags-nav="internal"]').click();
+        cy.ghostscreenshot('select internal tag filter');
+    }
 }
 
 export default TagListPage;
