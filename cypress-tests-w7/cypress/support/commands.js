@@ -1,4 +1,5 @@
 import 'cypress-file-upload';
+import { environment } from '../e2e/environments/environment';
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -25,6 +26,7 @@ import 'cypress-file-upload';
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 Cypress.Commands.add('ghostscreenshot', (name_string) => {
+    if (!environment.screenshots) return;
     cy.wait(600);
     cy.screenshot(name_string, {overwrite: true});
   });

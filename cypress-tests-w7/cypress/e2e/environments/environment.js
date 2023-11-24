@@ -1,9 +1,5 @@
-//URL Base de la aplicación
-const baseUrl = 
- 'http://localhost:2368/ghost/#/';
-
-
 export const environment = {
+  screenshots: false,
   production: false,
   baseUrl: 'http://localhost:2368/ghost/#/',
   //Credenciales para login con usuario de pruebas
