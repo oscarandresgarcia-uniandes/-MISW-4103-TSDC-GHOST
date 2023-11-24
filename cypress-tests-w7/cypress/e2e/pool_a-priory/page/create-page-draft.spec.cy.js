@@ -1,6 +1,5 @@
 import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
-import { faker } from '@faker-js/faker';
 
 describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
     const pageContentPage = new PageContentPage();
