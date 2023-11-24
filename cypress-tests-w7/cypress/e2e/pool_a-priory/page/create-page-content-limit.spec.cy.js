@@ -13,18 +13,18 @@ describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
         pageContentPage.visit();
         
         const pageData = {
-            title: dataPool['page-post'][0].title,
-            content: dataPool['page-post'][0].html,
+            title: dataPool['page-post'][2].title, // texto muy largo
+            content: dataPool['page-post'][2].plaintext,
         };
 
-        // Crear una nueva página
+        // Crear una nueva página como featured
         pageContentPage.contentPage(pageData);
 
         // navegar al listado de páginas
         pageListPage.visit();
        
 
-        //La pagina está creada en draft
-        pageListPage.pageExists(pageData, 'Draft');
+        //La pagina está creada en el listado
+        pageListPage.pageExists(pageData);
     });
 });

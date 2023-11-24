@@ -21,12 +21,18 @@ class PageContentPage {
       cy.ghostscreenshot('publish page confirtm');
     }
 
-    schedulePage(){
+    schedulePage(date=null){
       cy.get('button[data-test-button="publish-flow"]').click();
       cy.ghostscreenshot('schedule page');
       cy.get('.gh-publish-setting-trigger').contains('Right now').click();
       cy.ghostscreenshot('schedule page now');
       cy.get('.gh-radio ').contains('Schedule for later').click();
+
+      if(date){
+        cy.get('input[data-test-date-time-picker-date-input]').clear().type(date);
+      }
+
+
       cy.ghostscreenshot('schedule page later');
       cy.get('button[data-test-button="continue"]').click();
       cy.ghostscreenshot('schedule page continue');
