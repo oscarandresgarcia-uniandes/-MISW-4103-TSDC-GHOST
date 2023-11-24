@@ -8,8 +8,7 @@ describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
     it.only('Crear Página Exitoso en draft', function() {
 
         const dataPool = this.dataPool;
-
-        cy.log(JSON.stringify(dataPool));
+        //cy.log(JSON.stringify(dataPool));
 
         pageContentPage.visit();
         
