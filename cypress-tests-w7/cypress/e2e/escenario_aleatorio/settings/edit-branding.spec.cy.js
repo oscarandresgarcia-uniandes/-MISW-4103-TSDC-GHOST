@@ -1,19 +1,11 @@
-import {environment} from '../../environments/environment';
 import LoginPage from '../../page-object/LoginPage';
 import SettingsPage from '../../page-object/SettingsPage';
 import { faker } from '@faker-js/faker';
 
-describe('Edición del Branding del Site creado', () => {
+describe('Edición del Branding del Site creado', function() {
     const settingsPage = new SettingsPage();
-    const loginPage = new LoginPage();
-    beforeEach(()=>{
-        //Se hace login del usuario 
-        loginPage.visit();
-        cy.wait(1000)
-        loginPage.login();
-    })
 
-    it('Test para editar el color (branding) del Site', () => {
+    it('Test para editar el color (branding) del Site', function() {
         const titleSite = faker.lorem.words(5);
         const colorSite = faker.color.rgb().toUpperCase();
         //Se accede a página de configuración del diseño

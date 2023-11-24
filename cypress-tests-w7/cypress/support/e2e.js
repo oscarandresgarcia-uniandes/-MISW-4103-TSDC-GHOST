@@ -14,7 +14,8 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
+import LoginPage from '../e2e/page-object/LoginPage';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
@@ -23,3 +24,15 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     // returning false here prevents Cypress from failing the test
     return false;
 });
+
+beforeEach(() => {
+
+    const loginPage = new LoginPage();
+
+    //Importar el data pool para todos los specs
+    cy.fixture('data-pool.json').as('dataPool');
+
+    loginPage.visit();
+    loginPage.login();
+});
+  

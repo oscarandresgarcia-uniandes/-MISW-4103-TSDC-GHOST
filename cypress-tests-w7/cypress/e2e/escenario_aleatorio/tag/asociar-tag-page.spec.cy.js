@@ -1,21 +1,14 @@
-import LoginPage from '../../page-object/LoginPage';
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Tags - Asociar tag a page', () => {
-    const loginPage = new LoginPage();
+describe('Gestión de Tags - Asociar tag a page', function() {
     const tagNewPage = new TagNewPage();
     const tagListPage = new TagListPage();
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
-
-    beforeEach(() => {
-        loginPage.visit();
-        loginPage.login();
-    });
 
     function createTag(tagData) {
         tagNewPage.visit();

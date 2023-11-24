@@ -1,18 +1,11 @@
-import LoginPage from '../../page-object/LoginPage';
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import TagEditPage from '../../page-object/TagEditPage';
 
-describe('Gestión de Tags - Crear Tag Con datos inválidos y requeridos', () => {
-    const loginPage = new LoginPage();
+describe('Gestión de Tags - Crear Tag Con datos inválidos y requeridos', function() {
     const tagListPage = new TagListPage();
     const tagNewPage = new TagNewPage();
     const tagEditPage = new TagEditPage();
-
-    beforeEach(() => {
-        loginPage.visit();
-        loginPage.login();
-    });
 
     it.only('Crear Tag con parámetros invalidos y requeridos', () => {
         tagNewPage.visit();

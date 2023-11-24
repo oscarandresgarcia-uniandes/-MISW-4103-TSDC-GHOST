@@ -1,18 +1,11 @@
-import LoginPage from '../../page-object/LoginPage';
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import TagEditPage from '../../page-object/TagEditPage';
 
-describe('Gestión de Tags - Crear Tag Exitoso', () => {
-    const loginPage = new LoginPage();
+describe('Gestión de Tags - Crear Tag Exitoso', function() {
     const tagListPage = new TagListPage();
     const tagNewPage = new TagNewPage();
     const tagEditPage = new TagEditPage();
-
-    beforeEach(() => {
-        loginPage.visit();
-        loginPage.login();
-    });
 
     it.only('Crear Tag Exitoso', () => {
         tagNewPage.visit();

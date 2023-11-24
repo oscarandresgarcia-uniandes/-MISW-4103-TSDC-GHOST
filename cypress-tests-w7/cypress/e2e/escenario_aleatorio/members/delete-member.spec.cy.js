@@ -1,20 +1,11 @@
-import {environment} from '../../environments/environment';
-import LoginPage from '../../page-object/LoginPage';
 import MemberNewPage from '../../page-object/MemberNewPage';
 import MemberListPage from '../../page-object/MemberListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Borrado de un Miembro en la aplicación', () => {
+describe('Borrado de un Miembro en la aplicación', function() {
     
-    const loginPage = new LoginPage();
     const memberPage = new MemberNewPage();
     const memberListPage = new MemberListPage();
-    beforeEach(()=>{
-        //Se hace login del usuario 
-        loginPage.visit();
-        cy.wait(1000)
-        loginPage.login();
-    })
 
     it('Test para eliminar un miembro de manera exitosa', () => {
         const memName = faker.person.fullName();

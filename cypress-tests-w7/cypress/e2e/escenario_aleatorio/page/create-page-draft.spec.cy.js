@@ -1,17 +1,10 @@
-import LoginPage from '../../page-object/LoginPage';
 import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Páginas - Crear Página Exitoso en draft', () => {
-    const loginPage = new LoginPage();
+describe('Gestión de Páginas - Crear Página Exitoso en draft', function() {
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
-
-    beforeEach(() => {
-        loginPage.visit();
-        loginPage.login();
-    });
 
     it.only('Crear Página Exitoso en draft', () => {
         pageContentPage.visit();

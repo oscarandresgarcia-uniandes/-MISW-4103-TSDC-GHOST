@@ -1,23 +1,14 @@
-import LoginPage from '../../page-object/LoginPage';
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import PostNewPage from '../../page-object/PostNewPage';
 import PostListPage from '../../page-object/PostListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Asociar tag a post', () => {
-    const loginPage = new LoginPage();
+describe('Asociar tag a post', function() {
     const tagNewPage = new TagNewPage();
     const tagListPage = new TagListPage();
     const postPage = new PostNewPage();
     const postListPage = new PostListPage();
-
-    beforeEach(() => {
-        //Se hace login del usuario 
-        loginPage.visit();
-        cy.wait(1000)
-        loginPage.login();
-    });
 
     function createTag(tagData) {
         tagNewPage.visit();

@@ -1,19 +1,12 @@
-import LoginPage from '../../page-object/LoginPage';
 import TagNewPage from '../../page-object/TagNewPage';
 import TagListPage from '../../page-object/TagListPage';
 import TagEditPage from '../../page-object/TagEditPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Tags - Borrar tag', () => {
-    const loginPage = new LoginPage();
+describe('Gestión de Tags - Borrar tag', function() {
     const tagListPage = new TagListPage();
     const tagNewPage = new TagNewPage();
     const tagEditPage = new TagEditPage();
-
-    beforeEach(() => {
-        loginPage.visit();
-        loginPage.login();
-    });
 
     function createTag(tagData) {
         tagNewPage.visit();
