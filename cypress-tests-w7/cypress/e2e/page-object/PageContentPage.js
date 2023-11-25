@@ -7,9 +7,52 @@ class PageContentPage {
     }
 
     contentPage(pageData) {
-      cy.get('.gh-editor-title').type(pageData.title);
-      cy.get('.kg-prose p').type(pageData.content);
+
+      function addCard(element) {
+
+        cy.get('[data-kg-plus-button="true"]').click();
+        cy.get('[data-kg-card-menu-item="' + element.id + '"]').click();
+       
+        if(element.id == 'Button')  {
+          cy.get('[data-testid="button-input-text"]').type(element.text);
+        }
+
+        if(element.id == 'Callout')  {
+          cy.get('[data-testid="callout-bg-blue"] [data-lexical-editor="true"]').type(element.text);
+        }
+      }
+
+      if(pageData.title) {
+        cy.get('.gh-editor-title').type(pageData.title);
+      }
+
+      if (pageData.content) {
+        cy.get('.kg-prose p').type(pageData.content);
+      }
+
+      if (pageData.button) {
+        addCard(pageData.button);
+      }
+
+      if (pageData.callout) {
+        addCard(pageData.callout);
+      }
+      
       cy.ghostscreenshot('type page content');
+    }
+
+    hasContent(data) {
+      if(data.button) {
+        if(data.button.text) {
+          cy.get('[data-testid="button-card-btn"]').contains(data.button.text);
+        }
+      }
+
+      if(data.callout) {
+        if(data.callout.text) {
+          cy.get('[data-testid="callout-bg-blue"]').contains(data.callout.text);
+        }
+      }
     }
 
     publishPage(){

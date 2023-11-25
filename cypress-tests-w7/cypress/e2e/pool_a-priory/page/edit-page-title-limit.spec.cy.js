@@ -2,7 +2,7 @@ import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Páginas - Editar página', function() {
+describe('Gestión de Páginas - Editar página con límites de frontera título', function() {
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
 
