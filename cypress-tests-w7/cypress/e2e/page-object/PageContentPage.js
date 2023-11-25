@@ -14,11 +14,22 @@ class PageContentPage {
         cy.get('[data-kg-card-menu-item="' + element.id + '"]').click();
        
         if(element.id == 'Button')  {
-          cy.get('[data-testid="button-input-text"]').type(element.text);
+          if(element.text) {
+            cy.get('[data-testid="button-input-text"]').type(element.text);
+          }
+
+          if(element.url) {
+            cy.get('[data-testid="button-input-url"]').type(element.url);
+          }
+          
         }
 
         if(element.id == 'Callout')  {
           cy.get('[data-testid="callout-bg-blue"] [data-lexical-editor="true"]').type(element.text);
+        }
+
+        if(element.id == 'Header')  {
+          cy.get('[data-testid="header-heading-editor"] [data-lexical-editor="true"]').type(element.text);
         }
       }
 
@@ -37,6 +48,10 @@ class PageContentPage {
       if (pageData.callout) {
         addCard(pageData.callout);
       }
+
+      if (pageData.header) {
+        addCard(pageData.header);
+      }
       
       cy.ghostscreenshot('type page content');
     }
@@ -46,12 +61,18 @@ class PageContentPage {
         if(data.button.text) {
           cy.get('[data-testid="button-card-btn"]').contains(data.button.text);
         }
+
+        if(data.button.url) {
+          cy.get('[data-testid="button-card-btn"][href="' + data.button.url + '"]').should('exist');
+        }
       }
 
       if(data.callout) {
-        if(data.callout.text) {
-          cy.get('[data-testid="callout-bg-blue"]').contains(data.callout.text);
-        }
+        cy.get('[data-testid="callout-bg-blue"]').contains(data.callout.text);
+      }
+
+      if(data.header) {
+          cy.get('[data-testid="header-heading-editor"]').contains(data.header.text);
       }
     }
 

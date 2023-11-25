@@ -2,11 +2,11 @@ import PageContentPage from '../../page-object/PageContentPage';
 import PageListPage from '../../page-object/PageListPage';
 import { faker } from '@faker-js/faker';
 
-describe('Gestión de Páginas - Crear página con título y elemento de botón', function() {
+describe('Gestión de Páginas - Crear página con título y elemento de botón y URL inválida', function() {
     const pageContentPage = new PageContentPage();
     const pageListPage = new PageListPage();
 
-    it.only('Crear página con título y elemento de botón', function () {
+    it.only('Crear página con título y elemento de botón y URL inválida', function () {
 
         const dataPool = this.dataPool;
         //cy.log(JSON.stringify(dataPool));
@@ -17,7 +17,8 @@ describe('Gestión de Páginas - Crear página con título y elemento de botón'
             title: dataPool['page-post'][0].title + '{enter}',
             button: {
                 id: 'Button',
-                text: dataPool['page-post'][0].title
+                text: dataPool['page-post'][0].title,
+                url: dataPool['page-post'][0].title //URL inválida para elemento de botón
             }
         };
 

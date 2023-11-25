@@ -25,6 +25,13 @@ class TagListPage {
         cy.ghostscreenshot('tag exists');
     }
 
+    tagIsSanitized(tagData) {
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
+        let sanitizedCode = '<script>';
+        cy.get('.gh-tags-list-item .gh-tag-list-name')
+        .should('not.contain', Cypress._.escape(sanitizedCode));
+    }
+
     tagNotExist(tagData) {
         cy.window().scrollTo('bottom', { ensureScrollable: false });
         cy.get('.gh-tags-list-item .gh-tag-list-name').should('not.contain', tagData.name);

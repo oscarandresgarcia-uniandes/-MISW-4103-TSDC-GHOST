@@ -27,6 +27,26 @@ class TagNewPage {
       } else {
         cy.ghostscreenshot('new tag page no image');
       }
+
+      if(tagData.canonicalURL) {
+        cy.get('.gh-expandable-title').contains('Meta data')
+        .parent()
+        .parent()
+        .find('button').click();
+
+        cy.get('#canonical-url').type(tagData.canonicalURL);
+      }
+    }
+
+    validSanitized(data) {
+      let maliciousScript = '<script>';
+      if (data.slug) {
+        cy.get('#tag-slug').invoke('val').should('not.include', maliciousScript);
+      }
+
+      if (data.name) {
+        cy.get('#tag-name').invoke('val').should('not.include', maliciousScript);
+      }
     }
 
     clearFields() {
@@ -39,8 +59,17 @@ class TagNewPage {
 
     saveCreateTag() {
       cy.get('button[data-test-button="save"]').click();
-      cy.ghostscreenshot('save tag');
-      
+
+      //En el caso que el modal de confirmación aparezca, borrarlo
+      cy.get('body').then((body) => {
+        cy.wait(500).then(() => {
+            if (body.find('[data-test-modal="unsaved-settings"] [data-test-leave-button]').length > 0) {
+                cy.get('[data-test-modal="unsaved-settings"] [data-test-leave-button]').click();
+            }
+        })
+    });
+    
+    cy.ghostscreenshot('save tag');
     }
 
     invalidTagData(validationList, retry = true) {
