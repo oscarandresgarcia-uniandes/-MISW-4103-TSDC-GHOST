@@ -49,6 +49,16 @@ class PostNewPage {
         cy.get('.ember-power-select-option').contains(tagName).click();
     }
 
+    //Editar excerpt del Post
+    editExcerpt(exName){
+        cy.get('.gh-main')
+                    .find('button[title="Settings"]')
+                    .click();
+                    cy.wait(1000)
+        cy.get('[name="post-setting-custom-excerpt"]').type(exName);
+
+    }
+
     //Crear nuevo Post con opción de diferentes estados
     createPost(title,body){
         this.editTitle(title)
@@ -105,7 +115,7 @@ class PostNewPage {
 
                     break;
             case 'Publish leave':
-                cy.get('[data-test-button="publish-flow"]').click()
+                cy.get('[data-test-button="publish-flow"]').click({force: true})
                 cy.wait(1000)
                 
                 break;
@@ -118,6 +128,11 @@ class PostNewPage {
 
     validateLimitTitle(){
         cy.contains('Validation failed: Title cannot be longer than 255 characters.');
+
+    }
+
+    validateLimitExcerpt(){
+        cy.contains('Excerpt cannot be longer than 300 characters.');
 
     }
 
