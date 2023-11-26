@@ -21,13 +21,18 @@ class PostNewPage {
         
         cy.get('@idPostElement').then((idPostElement) => {
             cy.get('[data-test-post-id="'+idPostElement+'"]')
-            .contains('.gh-content-entry-status', 'Published')
             cy.visit(environment.baseUrl + 'editor/post/'+idPostElement);
             cy.wait(3000)
             cy.window().scrollTo('bottom', { ensureScrollable: false });
             cy.wait(3000)
         })
 
+    }
+
+    //Limpiar la información de un post
+    clearData(){
+        cy.get('.gh-editor-title').clear()
+        cy.get('.kg-prose p').clear()
     }
 
     //Editar Título del Post
