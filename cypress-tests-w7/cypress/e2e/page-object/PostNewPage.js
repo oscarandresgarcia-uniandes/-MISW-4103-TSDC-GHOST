@@ -59,6 +59,20 @@ class PostNewPage {
 
     }
 
+    //Editar fecha de publicación del Post
+    editPublishDate(date){
+        cy.get('.gh-main')
+                    .find('button[title="Settings"]')
+                    .click();
+                    cy.wait(1000)
+        cy.get('input[data-test-date-time-picker-date-input]')
+            .clear()
+            .type(date,{force: true})
+            .type('{enter}',{force: true})
+
+          
+    }
+
     //Crear nuevo Post con opción de diferentes estados
     createPost(title,body){
         this.editTitle(title)
@@ -135,6 +149,14 @@ class PostNewPage {
         cy.contains('Excerpt cannot be longer than 300 characters.');
 
     }
+
+    validateDate(){
+        cy.contains('Invalid date');
+
+    }
+
+
+    
 
     leavePage(){
         cy.contains('button', 'Leave')
