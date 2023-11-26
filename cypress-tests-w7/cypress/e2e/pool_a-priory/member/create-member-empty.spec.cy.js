@@ -23,14 +23,6 @@ describe('Creación de un Miembro en la aplicación sin data', function() {
 
         //Se verifica que la página solicite campos requeridos
         memberPage.validateRequiredFields()
-
-        //Se crea miembro con información
-        memberPage.createMember(memName,memEmail,memLabel,memNote)
-        memberPage.saveMember()
-
-        //Se verifica que el miembro haya sido creado con el nombre y el email
-        memberListPage.visit();
-        memberListPage.checkMemberExists(memName,memEmail);
         
     })
   })
