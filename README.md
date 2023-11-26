@@ -10,8 +10,11 @@
 
 ## Semana 7
 
-## Listado de issues encontrados con las regresiones visuales y comparación VRT
+## Listado de issues encontrados con las estrategias de generación de datos
 https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues?q=is%3Aopen+is%3Aissue+label%3AW7
+
+## Listado de los escenarios y estrategias para la generación de generación de datos
+[https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/](https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Listado-de-escenatios-y-estrategias-de-generaci%C3%B3n-de-datos)
 
 ## Instrucciones para correr las pruebas con estrategia de generación de datos en Cypress:
 * Instale la versión de Ghost 5.73.2 en su entorno local:
