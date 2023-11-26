@@ -7,6 +7,36 @@
 * Bryand Salamanca (b.salamanca@uniandes.edu.co)
 * Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
 
+
+## Semana 7
+
+## Listado de issues encontrados con las estrategias de generación de datos
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues?q=is%3Aopen+is%3Aissue+label%3AW7
+
+## Listado de los escenarios y estrategias para la generación de generación de datos
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Listado-de-escenarios-y-estrategias-de-generaci%C3%B3n-de-datos
+
+## Instrucciones para correr las pruebas con estrategia de generación de datos en Cypress:
+* Instale la versión de Ghost 5.73.2 en su entorno local:
+* ```npm install ghost-cli@latest -g```
+* ```ghost install 5.73.2 local```
+* Tenga en cuenta el puerto donde corre la versión de Ghost y visite el sitio de Ghost local creado para crear el usuario administrador:
+* En su navegador vaya a http://localhost:<puerto>/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto de acuerdo a la instalación de ser necesario)
+* Instale la versión de node v18.18.1
+* Clone este repositorio
+* Ubíquese en el directorio cypress-tests-w7/
+* Ejecute el comando ```npm install```
+* Abra el archivo ubicado en ```cypress/e2e/environments/environment.js``` y cambie el puerto si es necesario de acuerdo a su instalación de Ghost
+* En el mismo archivo ```environments/environment.js``` ponga el usuario y password de acuerdo a las credenciales escogidas para la creación del usuario administrador Ghost
+* Generar screenshots es opcional. Si desea hacerlo cambie el parámentro de este archivo a true o false segun desee.
+* en el archivo support/commands.js encuentra la lógica asociada a activar/desactivar los screenshots segín el parametro. No es necesario modificarlo
+* en el archivo support/e2e.js encuentra la lógica que determina si se usa el API dinámico de Mockaroo o los datos apriori en el archivo json en la carpeta fixtures. No es necesario modificarlo
+* Para correr las pruebas segun cada estrategia:
+* ```npx cypress run --spec "cypress/e2e/escenario_aleatorio"```
+* ```npx cypress run --spec "cypress/e2e/pool_a-priory"```
+* ```npx cypress run --spec "cypress/e2e/pool-pseudo-aleatorio-dinamico"```
+* Para correr todas las pruebas: ```npx cypress run```
+
 ## Semana 6
 
 ## Listado de issues encontrados con las regresiones visuales y comparación VRT
