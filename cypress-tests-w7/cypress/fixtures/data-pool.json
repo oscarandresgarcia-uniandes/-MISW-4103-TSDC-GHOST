@@ -153,5 +153,15 @@
       "cover_image": "http://dummyimage.com/161x100.png/5fa2dd/ffffff",
       "timezone": "America/Argentina/Buenos_Aires",
       "locale": "AR"
-    }
+    },
+    "label": [
+      {
+        "name": "Realpoint",
+        "slug": "vgq-bifj",
+        "created_at": "4/19/2023",
+        "created_by": "Neils",
+        "updated_at": "1/27/2023",
+        "updated_by": "Albina"
+      }
+    ]
   }

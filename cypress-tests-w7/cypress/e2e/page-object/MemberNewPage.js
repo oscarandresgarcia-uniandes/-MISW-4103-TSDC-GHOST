@@ -88,6 +88,11 @@ class MemberNewPage {
         
     }
 
+    //Validar que se muestren mensajes para campos requeridos
+    validateRequiredFields(){
+        cy.contains('Please enter an email')
+    }
+
 
     
 
