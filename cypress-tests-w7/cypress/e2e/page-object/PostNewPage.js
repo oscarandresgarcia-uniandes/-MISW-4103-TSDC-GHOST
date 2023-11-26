@@ -104,11 +104,28 @@ class PostNewPage {
                     
 
                     break;
+            case 'Publish leave':
+                cy.get('[data-test-button="publish-flow"]').click()
+                cy.wait(1000)
+                
+                break;
+
             default:
                 cy.get('[data-test-link="posts"]').click();
         }
         
     }
+
+    validateLimitTitle(){
+        cy.contains('Validation failed: Title cannot be longer than 255 characters.');
+
+    }
+
+    leavePage(){
+        cy.contains('button', 'Leave')
+                .click()
+    }
+
 
 }
 export default PostNewPage;
