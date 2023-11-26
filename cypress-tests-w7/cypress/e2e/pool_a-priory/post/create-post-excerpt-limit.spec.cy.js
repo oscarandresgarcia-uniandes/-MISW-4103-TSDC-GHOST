@@ -1,12 +1,12 @@
 import PostNewPage from '../../page-object/PostNewPage';
 import PostListPage from '../../page-object/PostListPage';
 
-describe('Creación de un Post excediendo limite en título', function() {
+describe('Creación de un Post excediendo limite en excerpt', function() {
     
     const postPage = new PostNewPage();
     const postListPage = new PostListPage();
 
-    it('Test para crear un Post con un título que exceda la cantidad de caracteres', function() {
+    it('Test para crear un Post con un excerpt que exceda la cantidad de caracteres', function() {
 
         const dataPool = this.dataPool;
         const postTitle = dataPool['page-post'][0].title
