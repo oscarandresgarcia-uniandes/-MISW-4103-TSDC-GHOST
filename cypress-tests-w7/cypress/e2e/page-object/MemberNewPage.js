@@ -106,6 +106,11 @@ class MemberNewPage {
         cy.contains('Invalid Email.')
     }
 
+    //Validar que se muestren mensajes para campos que exceden cantidad de caracteres
+    validateLimitFields(){
+        cy.contains('Name cannot be longer than 191 characters.')
+    }
+
 
     
 
