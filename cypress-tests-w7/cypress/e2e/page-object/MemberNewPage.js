@@ -77,6 +77,14 @@ class MemberNewPage {
         cy.wait(1000);
     }
 
+    //Reintentar guardar Miembro
+    retrySaveMember(){
+        cy.contains("Retry")
+        .parent()
+        .click();
+        cy.wait(1000);
+    }
+
     //Borrar Miembro
     deleteMember(){
         cy.get('button[data-test-button="member-actions"]').click();
@@ -91,6 +99,11 @@ class MemberNewPage {
     //Validar que se muestren mensajes para campos requeridos
     validateRequiredFields(){
         cy.contains('Please enter an email')
+    }
+
+    //Validar que se muestren mensajes para campos con data inválida
+    validateInvalidFields(){
+        cy.contains('Invalid Email.')
     }
 
 
