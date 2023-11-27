@@ -42,7 +42,7 @@ class MemberNewPage {
         cy.get('.ember-power-select-trigger-multiple-input').clear().type(labels) 
     }
     editNote(note){
-        cy.get('textarea[name="note"]').clear().type(note) 
+        cy.get('textarea[name="note"]').clear().type(note,{ delay: 0}) 
     }
 
     //Llenar formato Miembro
@@ -115,6 +115,11 @@ class MemberNewPage {
     validateLimitEmail(){
         
         cy.contains('Email cannot be longer than 191 characters.')
+    }
+
+    validateLimitNote(){
+        
+        cy.contains('Note is too long.')
     }
 
 
