@@ -37,6 +37,23 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Listado-
 * ```npx cypress run --spec "cypress/e2e/pool-pseudo-aleatorio-dinamico"```
 * Para correr todas las pruebas: ```npx cypress run```
 
+* ## Instrucciones para correr pruebas en Kraken-w7:
+* Instale la versión mas reciente de Ghost en su entorno local. ver https://ghost.org/docs/install/local/
+* En su navegador vaya a http://localhost:2368/ghost/ y siga las instrucciones para crear el usuario administrador (cambie el puerto si es necesario de acuerdo a su instalación)
+* instale la kraken https://misovirtual.virtual.uniandes.edu.co/codelabs/kraken-testing-tool/index.html?index=..%2F..index#0
+* En un computador con el sistema operativo windows 10.
+* Instale una versión de node (se recomienda v16.14.2)
+* Clone este repositorio
+* Ubíquese en el directorio donde se encuentra la carpeta kraken-W7 de este repositorio
+* Modifique el archivo ```properties.json```
+* en el formato de este archivo coloque sus credenciales de ingreso a ghost
+* Ingrese a la ruta donde ```kraken-w7features/features``` aca encontrara las pruebas
+* Copie el archivo de pruebas que quiere ejecutar y peguelo en la ruta ```/features```
+* Recuerde que las pruebas deben ejecutarse en orden : Ejemplo (Prueba_1,Prueba_2...Prueba_n..Prueba_n+1)
+* Ejecute el comando ```npx kraken-node run```
+* En el nombre de cada prueba se encuentra la estrategia utilizada.
+* Se ejecuta la prueba deseada y los screenshots seran generados automaticamente en la carpeta ```/screenshots```
+
 ## Semana 6
 
 ## Listado de issues encontrados con las regresiones visuales y comparación VRT
