@@ -55,19 +55,19 @@ class PostNewPage {
     }
 
     //Editar imagen featured del post
-    editPostImage(imgurl){
-        cy.get('.gh-editor-feature-image-add-button')
-        .click()
+    editPostImage(name){
 
-        cy.fixture(tagData.image.name, 'binary')
+        cy.fixture(name, 'binary')
         .then(Cypress.Blob.binaryStringToBlob)
         .then(fileContent => {
           cy.get('input[type="file"]').attachFile({
             fileContent: fileContent,
-            fileName: tagData.image.name,
-            mimeType: tagData.image.type
+            fileName: name,
+            mimeType: 'image/png'
           });
         });
+
+        cy.wait(2000)
 
     }
 
