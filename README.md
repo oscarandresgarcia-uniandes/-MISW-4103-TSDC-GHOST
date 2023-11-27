@@ -49,7 +49,7 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Listado-
 * en el formato de este archivo coloque sus credenciales de ingreso a ghost
 * Ingrese a la ruta donde ```kraken-w7features/features``` aca encontrara las pruebas
 * Copie el archivo de pruebas que quiere ejecutar y peguelo en la ruta ```/features```
-* Recuerde que las pruebas deben ejecutarse en orden : Ejemplo (Prueba_1,Prueba_2...Prueba_n..Prueba_n+1)
+* Recuerde que las pruebas deben ejecutarse una a una 
 * Ejecute el comando ```npx kraken-node run```
 * En el nombre de cada prueba se encuentra la estrategia utilizada.
 * Se ejecuta la prueba deseada y los screenshots seran generados automaticamente en la carpeta ```/screenshots```
