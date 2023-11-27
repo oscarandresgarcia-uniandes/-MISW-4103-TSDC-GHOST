@@ -11,6 +11,13 @@ class PostListPage {
         cy.ghostscreenshot('visit post list page');
     }
 
+    //Ir a página de posts en estado Publicado
+    visitPublished(){
+        cy.visit(environment.baseUrl + 'posts?type=published');
+        cy.wait(3000)
+        cy.window().scrollTo('bottom', { ensureScrollable: false });
+    }
+
     //Verificar si el post existe con el estado esperado
     verifyPostStatus(postTitle, status) {
         cy.get('.gh-post-list-title').contains(postTitle)
