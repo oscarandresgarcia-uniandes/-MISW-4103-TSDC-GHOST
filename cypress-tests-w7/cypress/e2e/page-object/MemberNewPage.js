@@ -36,7 +36,7 @@ class MemberNewPage {
         cy.get('input[id="member-name"]').clear().type(name) 
     }
     editEmail(email){
-        cy.get('input[id="member-email"]').clear().type(email) 
+        cy.get('input[id="member-email"]').clear().type(email,{ delay: 0}) 
     }
     editLabels(labels){
         cy.get('.ember-power-select-trigger-multiple-input').clear().type(labels) 
@@ -108,7 +108,13 @@ class MemberNewPage {
 
     //Validar que se muestren mensajes para campos que exceden cantidad de caracteres
     validateLimitFields(){
+        
         cy.contains('Name cannot be longer than 191 characters.')
+    }
+
+    validateLimitEmail(){
+        
+        cy.contains('Email cannot be longer than 191 characters.')
     }
 
 
