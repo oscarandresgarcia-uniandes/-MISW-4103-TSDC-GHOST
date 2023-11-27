@@ -37,7 +37,7 @@ class PostNewPage {
 
     //Editar Título del Post
     editTitle(text){
-        cy.get('.gh-editor-title').clear().type(text)
+        cy.get('.gh-editor-title').clear().type(text,{ delay: 0})
     }
     //Editar cuerpo del Post
     editBody(text){
