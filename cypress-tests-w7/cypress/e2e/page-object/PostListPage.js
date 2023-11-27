@@ -18,6 +18,13 @@ class PostListPage {
         cy.window().scrollTo('bottom', { ensureScrollable: false });
     }
 
+    //Ir a página de posts en estado Featured
+    visitFeatured(){
+        cy.visit(environment.baseUrl + 'posts?type=featured');
+        cy.wait(3000)
+        cy.get('.gh-main').scrollTo('bottom', { ensureScrollable: false });
+    }
+
     //Verificar si el post existe con el estado esperado
     verifyPostStatus(postTitle, status) {
         cy.get('.gh-post-list-title').contains(postTitle)

@@ -54,6 +54,23 @@ class PostNewPage {
         cy.get('.ember-power-select-option').contains(tagName).click();
     }
 
+    //Editar imagen featured del post
+    editPostImage(imgurl){
+        cy.get('.gh-editor-feature-image-add-button')
+        .click()
+
+        cy.fixture(tagData.image.name, 'binary')
+        .then(Cypress.Blob.binaryStringToBlob)
+        .then(fileContent => {
+          cy.get('input[type="file"]').attachFile({
+            fileContent: fileContent,
+            fileName: tagData.image.name,
+            mimeType: tagData.image.type
+          });
+        });
+
+    }
+
     //Editar excerpt del Post
     editExcerpt(exName){
         cy.get('.gh-main')
@@ -137,6 +154,17 @@ class PostNewPage {
                 cy.get('[data-test-button="publish-flow"]').click({force: true})
                 cy.wait(1000)
                 
+                break;
+            
+            case 'Featured':
+                cy.get('.gh-main')
+                    .find('button[title="Settings"]')
+                    .click();
+                    cy.wait(2000)
+                cy.window().scrollTo('bottom', { ensureScrollable: false });
+                cy.get('.input-toggle-component')
+                    .click()
+
                 break;
 
             default:
