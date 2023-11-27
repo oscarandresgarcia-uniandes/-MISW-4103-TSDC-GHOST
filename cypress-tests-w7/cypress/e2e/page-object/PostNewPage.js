@@ -188,7 +188,11 @@ class PostNewPage {
 
     }
 
-
+    //Verificar que botón para publicar esté deshabilitado
+    cannotPublish(){
+        cy.get('[data-test-button="publish-flow"]')
+        .should('not.exist')
+    }
     
 
     leavePage(){
