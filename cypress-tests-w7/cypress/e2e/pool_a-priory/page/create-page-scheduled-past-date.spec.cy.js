@@ -20,7 +20,7 @@ describe('Gestión de Páginas - Crear Página Con fecha de publicación pasada'
        // Crear una nueva página
        pageContentPage.contentPage(pageData);
 
-       // publicar la página con fecha del data pool
+       // publicar la página con fecha pasada del data pool
        pageContentPage.schedulePage(dataPool['page-post'][1].published_at);
 
        // navegar al listado de páginas
