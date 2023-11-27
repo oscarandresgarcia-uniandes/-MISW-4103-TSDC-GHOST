@@ -188,6 +188,11 @@ class PostNewPage {
 
     }
 
+    validateImage(){
+        cy.contains('Please select a valid image');
+
+    }
+
     //Verificar que botón para publicar esté deshabilitado
     cannotPublish(){
         cy.get('[data-test-button="publish-flow"]')
