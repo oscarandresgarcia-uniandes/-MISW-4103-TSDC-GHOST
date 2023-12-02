@@ -7,6 +7,26 @@
 * Bryand Salamanca (b.salamanca@uniandes.edu.co)
 * Paula Bohorquez (p.bohorqueza@uniandes.edu.co)
 
+## Semana 8
+
+Estrategia de pruebas:
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Estrategia-de-Pruebas-%E2%80%90-S8
+
+Video explicativo semana de pruebas:
+
+Inventario de pruebas exploratorias:
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Inventario-de-pruebas 
+
+Issues reportados:
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/issues 
+
+Código fuente:
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST?search=1
+
+Las instrucciones para ejecución de las pruebas con ambas herramientas de acuerdo a la estrategia propuesta se pueden encontrar justo abajo en este documento
+
+
+
 
 ## Semana 7
 
