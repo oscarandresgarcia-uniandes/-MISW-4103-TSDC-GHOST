@@ -25,6 +25,9 @@ https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST?search=1
 
 Las instrucciones para ejecución de las pruebas con ambas herramientas de acuerdo a la estrategia propuesta se pueden encontrar justo abajo en este documento
 
+Retrospectiva semana 8:
+https://github.com/oscarandresgarcia-uniandes/MISW-4103-TSDC-GHOST/wiki/Retrospectiva-%E2%80%90-S8 
+
 
 
 
